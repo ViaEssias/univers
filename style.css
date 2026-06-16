@@ -7,30 +7,17 @@ body {
     margin: 0;
     padding: 0;
 
-    background-color: #1B1464;
-
     background-image:
-        radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.9), transparent),
-        radial-gradient(1.5px 1.5px at 120px 80px, rgba(255,255,255,0.8), transparent),
-        radial-gradient(2px 2px at 250px 150px, rgba(255,255,255,0.7), transparent),
-        radial-gradient(1px 1px at 320px 40px, rgba(255,255,255,0.9), transparent),
-        radial-gradient(2px 2px at 450px 200px, rgba(255,255,255,0.7), transparent),
-        radial-gradient(1px 1px at 600px 120px, rgba(255,255,255,0.8), transparent),
         linear-gradient(
-            to bottom,
-            #2A1B8F 0%,
-            #1B1464 45%,
-            #120D45 100%
-        );
+            rgba(5, 10, 40, 0.35),
+            rgba(5, 10, 40, 0.55)
+        ),
+        url("fond-indigo.png");
 
-    background-size:
-        700px 350px,
-        700px 350px,
-        700px 350px,
-        700px 350px,
-        700px 350px,
-        700px 350px,
-        cover;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 
     color: white;
     font-family: Georgia, serif;
@@ -107,7 +94,7 @@ p {
 }
 
 
-/* Images uniformisées */
+/* Images */
 
 .menu-item img {
     width: 260px;
@@ -119,7 +106,7 @@ p {
 }
 
 
-/* Simple respiration au survol */
+/* Effet léger au survol */
 
 .menu-item:hover img {
     transform: scale(1.04);
