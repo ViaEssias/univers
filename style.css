@@ -1,151 +1,211 @@
-body{
-    margin:0;
-    padding:0;
+/* ==========================
+   UNIVERS - Style général
+   ========================== */
 
+body {
+    margin: 0;
+    padding: 0;
+
+    /* Ciel indigo étoilé */
     background:
-        radial-gradient(white 1px, transparent 1px),
-        radial-gradient(white 1px, transparent 1px),
-        #0b1240;
+        radial-gradient(circle at 20% 30%, white 1px, transparent 1px),
+        radial-gradient(circle at 70% 60%, white 1px, transparent 1px),
+        radial-gradient(circle at 40% 80%, rgba(255,255,255,0.7) 1px, transparent 1px),
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.5) 2px, transparent 2px),
+        #070F35;
 
-    background-size:80px 80px, 120px 120px;
-    background-position:0 0, 40px 60px;
+    background-size:
+        150px 150px,
+        220px 220px,
+        180px 180px,
+        300px 300px;
 
-    color:white;
-    font-family:Georgia, serif;
+    color: white;
+    font-family: Georgia, serif;
 
-    min-height:100vh;
+    min-height: 100vh;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.conteneur{
-    width:85%;
-    max-width:1100px;
-    text-align:center;
-    padding:50px 0;
+
+/* ==========================
+   Contenu central
+   ========================== */
+
+.conteneur {
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    padding: 50px 0 70px;
 }
 
-/* TITRES */
 
-h1{
-    font-size:4.5em;
-    letter-spacing:10px;
-    color:#d9b45b;
+/* ==========================
+   Titre UNIVERS
+   ========================== */
+
+h1 {
+    font-size: 4.8em;
+    letter-spacing: 12px;
+    color: #E6C86E;
+
+    margin-bottom: 15px;
 
     text-shadow:
-        0 0 10px #d9b45b,
-        0 0 25px rgba(217,180,91,0.5);
-
-    margin-bottom:10px;
+        0 0 8px rgba(230,200,110,0.7),
+        0 0 20px rgba(230,200,110,0.4);
 }
 
 
-h2{
-    font-weight:normal;
-    font-size:1.8em;
-    margin-top:20px;
-    margin-bottom:40px;
+/* ==========================
+   Sous-titre
+   ========================== */
 
-    color:#f0e6c0;
+h2 {
+    font-size: 1.7em;
+    font-weight: normal;
+    color: #F1E8C9;
+
+    margin-top: 0;
+    margin-bottom: 40px;
+
+    line-height: 1.5;
 }
 
 
-p{
-    line-height:1.9;
-    font-size:1.1em;
+/* ==========================
+   Texte d'introduction
+   ========================== */
 
-    max-width:750px;
-    margin:auto;
-    margin-bottom:30px;
+p {
+    max-width: 760px;
+    margin: auto;
 
-    color:#e5e5e5;
+    font-size: 1.1em;
+    line-height: 1.9;
+    color: #EAEAEA;
 }
 
 
-/* LES TROIS PORTES */
+/* ==========================
+   Les trois portes
+   ========================== */
 
-.menu{
-    margin-top:90px;
+.menu {
+    margin-top: 90px;
 
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
-    gap:70px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 
-    flex-wrap:wrap;
+    gap: 70px;
+    flex-wrap: wrap;
 }
 
 
-.menu-item{
-    text-decoration:none;
+.menu-item {
+    text-decoration: none;
+    cursor: pointer;
 }
 
 
-/* IMAGES */
+/* ==========================
+   Images
+   ========================== */
 
-.menu-item img{
-    width:230px;
-    height:auto;
-    object-fit:contain;
-
-    border:none;
-    background:none;
+.menu-item img {
+    height: auto;
+    object-fit: contain;
 
     transition:
-        transform 0.5s,
-        filter 0.5s;
+        transform 0.6s ease,
+        filter 0.6s ease;
 }
 
 
-/* effet de rapprochement */
-.menu-item:hover img{
-    transform:scale(1.08);
-}
+/* Taille personnalisée de chaque symbole */
 
+/* L'Art d'être humain */
+.menu-item:nth-child(1) img {
+    width: 260px;
 
-/* Porte : lumière dorée */
-.menu-item:nth-child(1) img{
     filter:
-        drop-shadow(0 0 12px #ffd86b)
-        drop-shadow(0 0 25px #ffb300);
+        drop-shadow(0 0 12px #FFD76A)
+        drop-shadow(0 0 30px rgba(255,200,80,0.8));
 }
 
 
-/* Cheminant : lumière blanche */
-.menu-item:nth-child(2) img{
+/* Programme du Cheminant */
+.menu-item:nth-child(2) img {
+    width: 230px;
+
     filter:
         drop-shadow(0 0 10px white)
-        drop-shadow(0 0 25px rgba(255,255,255,0.8));
+        drop-shadow(0 0 25px rgba(255,255,255,0.7));
 }
 
 
-/* Akany : lumière douce chaude */
-.menu-item:nth-child(3) img{
+/* Akany Mahatsara */
+.menu-item:nth-child(3) img {
+    width: 240px;
+
     filter:
-        drop-shadow(0 0 8px #e5c56f)
-        drop-shadow(0 0 18px #b88a30);
+        drop-shadow(0 0 10px #D8B05A)
+        drop-shadow(0 0 22px rgba(216,176,90,0.6));
 }
 
 
-/* Version téléphone */
+/* Effet au survol */
+.menu-item:hover img {
+    transform: scale(1.08);
+}
 
-@media(max-width:768px){
 
-    h1{
-        font-size:3em;
+/* ==========================
+   Version téléphone
+   ========================== */
+
+@media (max-width: 768px) {
+
+    body {
+        align-items: flex-start;
     }
 
-    h2{
-        font-size:1.3em;
+    .conteneur {
+        padding-top: 40px;
     }
 
-    .menu{
-        gap:50px;
+    h1 {
+        font-size: 3em;
+        letter-spacing: 8px;
     }
 
-    .menu-item img{
-        width:180px;
+    h2 {
+        font-size: 1.25em;
+    }
+
+    p {
+        font-size: 1em;
+        line-height: 1.8;
+    }
+
+    .menu {
+        margin-top: 60px;
+        gap: 50px;
+    }
+
+    .menu-item:nth-child(1) img {
+        width: 220px;
+    }
+
+    .menu-item:nth-child(2) img {
+        width: 200px;
+    }
+
+    .menu-item:nth-child(3) img {
+        width: 210px;
     }
 }
