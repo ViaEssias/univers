@@ -2,14 +2,17 @@
 /* ==========================
    UNIVERS - Page d'accueil
    ========================== */
-
 body {
     margin: 0;
     min-height: 100vh;
 
-    background: url("fond_indigo.png") center center / cover no-repeat fixed;
+    background-color: #1B1035;
+    background-image: url("fond_indigo.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
-
 
 /* Conteneur principal */
 
