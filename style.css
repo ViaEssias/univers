@@ -7,21 +7,29 @@ body {
     margin: 0;
     padding: 0;
 
-    background:
-        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.15) 1px, transparent 2px),
-        radial-gradient(circle at 75% 35%, rgba(255,255,255,0.10) 1px, transparent 2px),
-        radial-gradient(circle at 45% 80%, rgba(255,255,255,0.12) 1px, transparent 2px),
+    background-color: #1B1464;
+
+    background-image:
+        radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.9), transparent),
+        radial-gradient(1.5px 1.5px at 120px 80px, rgba(255,255,255,0.8), transparent),
+        radial-gradient(2px 2px at 250px 150px, rgba(255,255,255,0.7), transparent),
+        radial-gradient(1px 1px at 320px 40px, rgba(255,255,255,0.9), transparent),
+        radial-gradient(2px 2px at 450px 200px, rgba(255,255,255,0.7), transparent),
+        radial-gradient(1px 1px at 600px 120px, rgba(255,255,255,0.8), transparent),
         linear-gradient(
             to bottom,
-            #232A78,
-            #171D5A,
-            #0D1238
+            #2A1B8F 0%,
+            #1B1464 45%,
+            #120D45 100%
         );
 
     background-size:
-        280px 280px,
-        340px 340px,
-        220px 220px,
+        700px 350px,
+        700px 350px,
+        700px 350px,
+        700px 350px,
+        700px 350px,
+        700px 350px,
         cover;
 
     color: white;
