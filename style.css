@@ -52,7 +52,7 @@ body {
 }
 
 
-/* Titre UNIVERS */
+/* Titre lumineux */
 
 h1 {
     font-size: 4em;
@@ -60,6 +60,11 @@ h1 {
     font-weight: normal;
     color: #F2E3A0;
     margin: 0;
+
+    text-shadow:
+        0 0 10px rgba(242, 227, 160, 0.6),
+        0 0 25px rgba(242, 227, 160, 0.4),
+        0 0 45px rgba(242, 227, 160, 0.25);
 }
 
 
