@@ -46,8 +46,38 @@ p{
     gap:20px;
 }
 
-.bloc{
-    border:1px solid white;
-    padding:25px;
+.menu{
+    margin-top:80px;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    gap:50px;
+
+    flex-wrap:wrap;
+}
+
+.menu-item{
+    text-decoration:none;
+    color:white;
+    text-align:center;
+
+    max-width:250px;
+}
+
+.menu-item img{
     width:220px;
+    height:auto;
+
+    transition:0.3s;
+}
+
+.menu-item img:hover{
+    transform:scale(1.05);
+}
+
+.menu-item h3{
+    margin-top:15px;
+    font-weight:normal;
+}
 }
