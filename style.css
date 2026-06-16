@@ -24,8 +24,6 @@ body {
 
 body {
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
 
     background-color: #1B1035 !important;
     background-image: url("fond_indigo.png") !important;
@@ -44,7 +42,8 @@ body {
     width: 90%;
     max-width: 1200px;
     text-align: center;
-    padding: 0 0 50px 0;
+    padding: 0;
+    margin: 0 auto;
     background: transparent !important;
 }
 
@@ -52,7 +51,8 @@ body {
 /* Titre UNIVERS */
 
 h1 {
-    margin-top: 0;
+    margin: 0;
+    padding-top: 5px;
     font-size: 4.5em;
     letter-spacing: 12px;
     font-weight: normal;
@@ -129,12 +129,8 @@ p {
 
 @media (max-width: 768px) {
 
-    body {
-        align-items: flex-start;
-    }
-
     .conteneur {
-        padding-top: 20px;
+        padding-top: 10px;
     }
 
     h1 {
