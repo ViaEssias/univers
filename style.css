@@ -2,9 +2,15 @@ body{
     margin:0;
     padding:0;
 
-    background:#1F295A;
-    color:white;
+    background:
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(white 1px, transparent 1px),
+        #0b1240;
 
+    background-size:80px 80px, 120px 120px;
+    background-position:0 0, 40px 60px;
+
+    color:white;
     font-family:Georgia, serif;
 
     min-height:100vh;
@@ -15,64 +21,131 @@ body{
 }
 
 .conteneur{
-    width:80%;
-    max-width:1000px;
+    width:85%;
+    max-width:1100px;
     text-align:center;
+    padding:50px 0;
 }
 
+/* TITRES */
+
 h1{
-    font-size:4em;
-    letter-spacing:5px;
+    font-size:4.5em;
+    letter-spacing:10px;
+    color:#d9b45b;
+
+    text-shadow:
+        0 0 10px #d9b45b,
+        0 0 25px rgba(217,180,91,0.5);
+
+    margin-bottom:10px;
 }
+
 
 h2{
     font-weight:normal;
-    margin-top:30px;
+    font-size:1.8em;
+    margin-top:20px;
     margin-bottom:40px;
+
+    color:#f0e6c0;
 }
+
 
 p{
-    line-height:1.8;
-    max-width:700px;
+    line-height:1.9;
+    font-size:1.1em;
+
+    max-width:750px;
     margin:auto;
-    margin-bottom:20px;
+    margin-bottom:30px;
+
+    color:#e5e5e5;
 }
 
-.menu{
-    margin-top:80px;
 
-    display:flex;
-    justify-content:center;
-    gap:20px;
-}
+/* LES TROIS PORTES */
 
 .menu{
-    margin-top:80px;
+    margin-top:90px;
 
     display:flex;
     justify-content:center;
     align-items:flex-start;
-    gap:50px;
+    gap:70px;
 
     flex-wrap:wrap;
 }
 
+
 .menu-item{
     text-decoration:none;
-    color:white;
-    text-align:center;
-
-    max-width:250px;
 }
+
+
+/* IMAGES */
 
 .menu-item img{
-    width:220px;
-    height:220px;
+    width:230px;
+    height:auto;
     object-fit:contain;
-    border:1px solid white;
-    transition:0.3s;
+
+    border:none;
+    background:none;
+
+    transition:
+        transform 0.5s,
+        filter 0.5s;
 }
 
-.menu-item img:hover{
-    transform:scale(1.05);
+
+/* effet de rapprochement */
+.menu-item:hover img{
+    transform:scale(1.08);
+}
+
+
+/* Porte : lumière dorée */
+.menu-item:nth-child(1) img{
+    filter:
+        drop-shadow(0 0 12px #ffd86b)
+        drop-shadow(0 0 25px #ffb300);
+}
+
+
+/* Cheminant : lumière blanche */
+.menu-item:nth-child(2) img{
+    filter:
+        drop-shadow(0 0 10px white)
+        drop-shadow(0 0 25px rgba(255,255,255,0.8));
+}
+
+
+/* Akany : lumière douce chaude */
+.menu-item:nth-child(3) img{
+    filter:
+        drop-shadow(0 0 8px #e5c56f)
+        drop-shadow(0 0 18px #b88a30);
+}
+
+
+/* Version téléphone */
+
+@media(max-width:768px){
+
+    h1{
+        font-size:3em;
+    }
+
+    h2{
+        font-size:1.3em;
+    }
+
+    .menu{
+        gap:50px;
+    }
+
+    .menu-item img{
+        width:180px;
+    }
 }
