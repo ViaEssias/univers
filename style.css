@@ -5,28 +5,9 @@
 
 body {
     margin: 0;
-    padding: 0;
-
-    background-image:
-        linear-gradient(
-            rgba(5, 10, 40, 0.35),
-            rgba(5, 10, 40, 0.55)
-        ),
-        url("fond-indigo.png")center center / cover no-repeat fixed;
-
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-
-    color: white;
-    font-family: Georgia, serif;
-
     min-height: 100vh;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: url("fond-indigo.png") center center / cover no-repeat fixed;
 }
 
 
