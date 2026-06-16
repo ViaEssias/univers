@@ -75,9 +75,4 @@ p{
 .menu-item img:hover{
     transform:scale(1.05);
 }
-
-.menu-item h3{
-    margin-top:15px;
-    font-weight:normal;
-}
 }
