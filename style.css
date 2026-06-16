@@ -1,3 +1,4 @@
+```css
 /* ==========================
    UNIVERS - Page d'accueil
    ========================== */
@@ -6,13 +7,22 @@ body {
     margin: 0;
     padding: 0;
 
-    /* Fond indigo étoilé discret */
-    background-color: #171D5A;
-    background-image:
-        radial-gradient(white 1px, transparent 1px),
-        radial-gradient(rgba(255,255,255,0.6) 1px, transparent 1px);
-    background-size: 120px 120px, 200px 200px;
-    background-position: 0 0, 60px 80px;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,0.15) 1px, transparent 2px),
+        radial-gradient(circle at 75% 35%, rgba(255,255,255,0.10) 1px, transparent 2px),
+        radial-gradient(circle at 45% 80%, rgba(255,255,255,0.12) 1px, transparent 2px),
+        linear-gradient(
+            to bottom,
+            #232A78,
+            #171D5A,
+            #0D1238
+        );
+
+    background-size:
+        280px 280px,
+        340px 340px,
+        220px 220px,
+        cover;
 
     color: white;
     font-family: Georgia, serif;
@@ -89,28 +99,15 @@ p {
 }
 
 
-/* Images pures : aucun effet */
+/* Images uniformisées */
 
 .menu-item img {
-    height: auto;
+    width: 260px;
+    height: 260px;
+
     object-fit: contain;
 
     transition: transform 0.5s ease;
-}
-
-
-/* Dimensions propres à chaque symbole */
-
-.menu-item:nth-child(1) img {
-    width: 270px;
-}
-
-.menu-item:nth-child(2) img {
-    width: 230px;
-}
-
-.menu-item:nth-child(3) img {
-    width: 250px;
 }
 
 
@@ -152,15 +149,9 @@ p {
         gap: 50px;
     }
 
-    .menu-item:nth-child(1) img {
-        width: 220px;
-    }
-
-    .menu-item:nth-child(2) img {
+    .menu-item img {
         width: 190px;
-    }
-
-    .menu-item:nth-child(3) img {
-        width: 210px;
+        height: 190px;
     }
 }
+```
