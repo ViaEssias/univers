@@ -61,3 +61,20 @@ li {
 a {
     color: white;
 }
+.footer-retour {
+    text-align: center;
+    padding: 40px 20px 80px;
+}
+
+.footer-retour a {
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.footer-retour a:hover {
+    background: rgba(255,255,255,0.15);
+}
