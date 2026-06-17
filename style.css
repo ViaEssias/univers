@@ -228,7 +228,7 @@ p {
 .commande a {
     display: inline-block;
     padding: 14px 36px;
-    background: black;
+    background: none;
     color: white;
     text-decoration: none;
     border-radius: 8px;
