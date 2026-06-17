@@ -301,8 +301,7 @@ p {
 }
 
 .btn-programme:hover {
-    background: white;
-    color: #1B1035;
+    opacity: 0.8;
 }
 
 .identifiants {
