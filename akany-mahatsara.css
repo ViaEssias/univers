@@ -144,8 +144,8 @@ li {
 
 .hero-logo {
     display: block;
-    margin: 40px auto 0;
-    max-width: 280px;
+    margin: 0 auto;
+    max-width: 520px;
     width: 100%;
 }
 
