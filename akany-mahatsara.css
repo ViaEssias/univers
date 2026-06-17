@@ -172,6 +172,15 @@ li {
     margin: 30px auto;
     border-radius: 12px;
 }
+/* Images de la section raison d'être */
+
+.raison-image {
+    width: 100%;
+    max-width: 1100px;
+    display: block;
+    margin: 45px auto;
+    border-radius: 14px;
+}
 
 /* Galerie 2 colonnes */
 
