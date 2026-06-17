@@ -259,3 +259,54 @@ p {
 .footer-retour a:hover {
     opacity: 0.8;
 }
+/* ==========================
+   PROGRAMME DU CHEMINANT
+   ========================== */
+
+.programme-cheminant {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.logo-programme {
+    width: 220px;
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.programme-texte {
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+}
+
+.programme-texte p {
+    margin-bottom: 24px;
+}
+
+.btn-programme {
+    display: inline-block;
+    padding: 14px 36px;
+
+    background: transparent;
+    color: white;
+
+    border: 2px solid white;
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-size: 1.1rem;
+
+    transition: all 0.3s ease;
+}
+
+.btn-programme:hover {
+    background: white;
+    color: #1B1035;
+}
+
+.identifiants {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: white;
+}
