@@ -245,3 +245,12 @@ p {
 .commande a:hover {
     opacity: 0.8;
 }
+.footer-retour {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.footer-retour a {
+    color: white;
+    text-decoration: none;
+}
