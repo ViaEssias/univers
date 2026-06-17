@@ -143,6 +143,21 @@ li {
 /* Logo principal */
 
 .hero-logo {
+   .hero-slogan {
+    margin-top: 25px;
+
+    text-align: center;
+
+    font-size: 2.4em;
+    font-weight: normal;
+
+    color: #F2E3A0;
+
+    text-shadow:
+        0 0 10px rgba(242,227,160,0.6),
+        0 0 25px rgba(242,227,160,0.4),
+        0 0 45px rgba(242,227,160,0.25);
+}
     display: block;
     margin: 0 auto;
     max-width: 520px;
@@ -215,6 +230,13 @@ li {
 /* Mobile */
 
 @media (max-width: 768px) {
+   .hero-logo {
+    max-width: 280px;
+}
+
+.hero-slogan {
+    font-size: 1.4em;
+}
 
     .gallery-2 {
         grid-template-columns: 1fr;
