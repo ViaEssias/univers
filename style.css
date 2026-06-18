@@ -81,6 +81,7 @@ h2 {
     color: white;
 }
 
+
 /* Mise en valeur */
 
 strong {
@@ -88,13 +89,14 @@ strong {
     font-weight: normal;
 }
 
-/* Texte d'introduction */
+
+/* Texte courant */
 
 p {
     max-width: 750px;
     margin: 0 auto;
     line-height: 1.6;
-    font-size: 1.25em;
+    font-size: 1.45em;
     color: white;
 }
 
@@ -201,12 +203,13 @@ p {
     height: auto;
     margin-top: 20px;
 }
+/* Suite PAGE LIVRE */
 
 .quatrieme-couverture {
     width: 75%;
     margin: 40px auto;
     line-height: 1.8;
-    font-size: 1.15rem;
+    font-size: 1.45em;
 }
 
 .quatrieme-couverture p {
@@ -254,6 +257,7 @@ p {
 .commande a:hover {
     opacity: 0.8;
 }
+
 .footer-retour {
     text-align: center;
     margin: 60px 0;
@@ -268,6 +272,8 @@ p {
 .footer-retour a:hover {
     opacity: 0.8;
 }
+
+
 /* ==========================
    PROGRAMME DU CHEMINANT
    ========================== */
@@ -313,6 +319,11 @@ p {
     opacity: 0.8;
 }
 
+.identifiants {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: white;
+}
 .identifiants {
     margin-top: 20px;
     font-size: 1rem;
