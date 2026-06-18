@@ -78,6 +78,12 @@ h2 {
     color: white;
 }
 
+/* Mise en valeur */
+
+strong {
+    color: #F2E3A0;
+    font-weight: normal;
+}
 
 /* Texte d'introduction */
 
