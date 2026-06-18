@@ -341,13 +341,31 @@ li {
     border-radius: 14px;
 }
 
-/* Vision */
+/* ==========================
+   VISION
+   ========================== */
 
-.vision-image {
-    max-width: 900px;
+.vision-layout {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.vision-text {
+    flex: 1.2;
+}
+
+.vision-image-box {
+    flex: 1;
+}
+
+.vision-image-box img {
     width: 100%;
+    max-width: 520px;
     display: block;
-    margin: 0 auto 40px;
+    margin: auto;
+    border-radius: 16px;
 }
 
 /* Logo final */
