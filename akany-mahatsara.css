@@ -183,14 +183,27 @@ li {
 }
 /* Activités */
 
-.activites-premium {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 35px;
+/* Activités */
+
+.activites-layout {
     margin: 45px 0;
 }
 
+.activites-row {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 35px;
+}
+
+.activites-center {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
 .activite-item {
+    width: 380px;
     text-align: center;
 }
 
@@ -200,10 +213,10 @@ li {
 }
 
 .activite-item p {
-    margin-top: 15px;
-    text-align: center;
+    margin-top: 14px;
     color: #F2E3A0;
-    font-size: 1.3em;
+    text-align: center;
+    font-size: 1.35em;
 }
 
 /* Recueillement */
