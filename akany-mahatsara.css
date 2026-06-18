@@ -183,45 +183,27 @@ li {
 }
 /* Activités */
 
-/* Mosaïque activités */
-
-.mosaic-activites {
+.activites-premium {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 18px;
-    margin: 40px 0 50px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    margin: 45px 0;
 }
 
-.mosaic-card {
-    display: flex;
-    flex-direction: column;
-}
-
-.mosaic-card.reverse {
-    flex-direction: column;
-}
-
-.mosaic-card img {
-    width: 100%;
-    border-radius: 12px;
-}
-
-.mosaic-label {
-    height: 140px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+.activite-item {
     text-align: center;
-    padding: 20px;
+}
 
+.activite-item img {
+    width: 100%;
+    border-radius: 14px;
+}
+
+.activite-item p {
+    margin-top: 15px;
+    text-align: center;
     color: #F2E3A0;
     font-size: 1.3em;
-    line-height: 1.4;
-
-    border: 1px solid rgba(242,227,160,0.45);
-    border-radius: 12px;
 }
 
 /* Recueillement */
