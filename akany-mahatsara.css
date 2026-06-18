@@ -317,6 +317,8 @@ li {
     .vision-image {
         max-width: 100%;
     }
+.mosaic-activites {
+    grid-template-columns: 1fr;
 }
 
 /* Mobile */
