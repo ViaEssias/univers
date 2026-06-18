@@ -183,39 +183,41 @@ li {
 }
 /* Activités */
 
-/* Activités */
-
-.activites-layout {
-    margin: 45px 0;
+.activites-bloc {
+    margin: 50px 0;
 }
 
-.activites-row {
+.ligne-2 {
     display: flex;
     justify-content: center;
-    gap: 35px;
-    margin-bottom: 35px;
+    gap: 40px;
+    margin-bottom: 40px;
 }
 
-.activites-center {
+.ligne-centre {
     display: flex;
     justify-content: center;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
 }
 
-.activite-item {
-    width: 380px;
+.activite {
+    width: 420px;
     text-align: center;
 }
 
-.activite-item img {
+.activite.centre {
+    width: 420px;
+}
+
+.activite img {
     width: 100%;
     border-radius: 14px;
 }
 
-.activite-item p {
-    margin-top: 14px;
-    color: #F2E3A0;
+.activite p {
+    margin-top: 15px;
     text-align: center;
+    color: #F2E3A0;
     font-size: 1.35em;
 }
 
