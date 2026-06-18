@@ -181,6 +181,32 @@ li {
     margin: 45px auto;
     border-radius: 14px;
 }
+/* Autonomie */
+
+.autonomie-row-2 {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 35px 0;
+}
+
+.autonomie-row-2 img {
+    width: 48%;
+    border-radius: 14px;
+}
+
+.autonomie-row-3 {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 35px 0 45px;
+}
+
+.autonomie-row-3 img {
+    width: 31%;
+    border-radius: 14px;
+}
+
 /* Activités */
 
 .activites-bloc {
