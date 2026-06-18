@@ -26,9 +26,16 @@ body {
 
 body {
     background-color: #1B1035;
+    background-image: url("fond_indigo.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 
     color: white;
     font-family: serif;
+    line-height: 1.8;
+    overflow-x: hidden;
 }
 
 
