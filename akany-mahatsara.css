@@ -319,7 +319,17 @@ li {
 .activites-grid {
     grid-template-columns: 1fr;
 }
-   }
+.autonomie-row-2,
+.autonomie-row-3 {
+    flex-direction: column;
+    align-items: center;
+}
+
+.autonomie-row-2 img,
+.autonomie-row-3 img {
+    width: 100%;
+    max-width: 500px;
+}
 
 .hero-slogan {
     font-size: 1.4em;
