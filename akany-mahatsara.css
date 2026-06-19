@@ -137,18 +137,17 @@
 
 .recueillement-image {
 
-    width: 100%;
+    width: 80%;
 
-    max-width: 550px;
+    max-width: 1100px;
 
     display: block;
 
-    margin: 35px auto 0;
+    margin: 45px auto;
 
-    border-radius: 14px;
+    border-radius: 16px;
 
 }
-
 
 
 .vision-full-image {
