@@ -137,15 +137,15 @@
 
 .recueillement-image {
 
-    width: 80%;
+    width: 100%;
 
-    max-width: 1100px;
+    max-width: 750px;
 
     display: block;
 
     margin: 45px auto;
 
-    border-radius: 16px;
+    border-radius: 14px;
 
 }
 
