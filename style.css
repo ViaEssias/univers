@@ -218,23 +218,15 @@ img {
 
 }
 
-
-
 .menu {
-
     display: flex;
-
     justify-content: center;
-
     align-items: center;
-
     gap: 60px;
-
     flex-wrap: wrap;
 
+    margin-bottom: 50px;
 }
-
-
 
 .menu-item {
 
