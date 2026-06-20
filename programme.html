@@ -172,6 +172,73 @@
 
    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
+<div id="fenetre-connexion" class="modal-contact">
+
+```
+<div class="modal-contact-contenu">
+
+    <div class="modal-titre">
+        CONNEXION
+    </div>
+
+    <form>
+
+        <div class="modal-corps">
+
+            <div style="width:100%;">
+
+                <div class="ligne-objet">
+
+                    <label for="login">
+                        Login :
+                    </label>
+
+                    <input
+                        type="text"
+                        id="login"
+                        name="login"
+                    >
+
+                </div>
+
+                <div class="ligne-objet" style="margin-top:20px;">
+
+                    <label for="motdepasse">
+                        Mot de passe :
+                    </label>
+
+                    <input
+                        type="password"
+                        id="motdepasse"
+                        name="motdepasse"
+                    >
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="modal-actions">
+
+            <button type="button" id="entrer-connexion">
+                Entrer
+            </button>
+
+            <button type="button" id="annuler-connexion">
+                Annuler
+            </button>
+
+        </div>
+
+    </form>
+
+</div>
+```
+
+</div>
+
+    
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
