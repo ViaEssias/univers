@@ -443,15 +443,10 @@ section {
     margin-bottom: 20px;
 }
 
-
 .programme-texte {
-
     width: min(90%, 800px);
-
-    margin: 0 auto 50px auto;
-
+    margin: 0 auto 25px auto;
 }
-
 
 
 .programme-texte p {
