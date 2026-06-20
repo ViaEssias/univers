@@ -239,70 +239,13 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-    console.log("SCRIPT CHARGÉ OK");
+    const btn = document.getElementById("btn-entrer");
+    const modal = document.getElementById("fenetre-connexion");
 
-    // =========================
-    // CONTACT
-    // =========================
-    const btnContact = document.getElementById("btn-contact");
-    const fenetreContact = document.getElementById("fenetre-contact");
-    const btnAnnulerContact = document.getElementById("annuler-contact");
-    const form = fenetreContact.querySelector("form");
-
-    if (btnContact && fenetreContact) {
-        btnContact.addEventListener("click", function (e) {
-            e.preventDefault();
-            fenetreContact.style.display = "flex";
-        });
-    }
-
-    if (btnAnnulerContact) {
-        btnAnnulerContact.addEventListener("click", function () {
-            fenetreContact.style.display = "none";
-        });
-    }
-
-    window.addEventListener("click", function (e) {
-        if (e.target === fenetreContact) {
-            fenetreContact.style.display = "none";
-        }
-    });
-
-    // =========================
-    // CONNEXION
-    // =========================
-    const btnEntrer = document.getElementById("btn-entrer");
-    const fenetreConnexion = document.getElementById("fenetre-connexion");
-    const btnAnnulerConnexion = document.getElementById("annuler-connexion");
-    const btnEntrerConnexion = document.getElementById("entrer-connexion");
-
-    console.log("BTN ENTRER =", btnEntrer);
-    console.log("MODAL CONNEXION =", fenetreConnexion);
-
-    if (btnEntrer && fenetreConnexion) {
-        btnEntrer.addEventListener("click", function (e) {
-            e.preventDefault();
-            console.log("CLICK ENTRER OK");
-            fenetreConnexion.style.display = "flex";
-        });
-    }
-
-    if (btnAnnulerConnexion) {
-        btnAnnulerConnexion.addEventListener("click", function () {
-            fenetreConnexion.style.display = "none";
-        });
-    }
-
-    if (btnEntrerConnexion) {
-        btnEntrerConnexion.addEventListener("click", function () {
-            fenetreConnexion.style.display = "none";
-        });
-    }
-
-    window.addEventListener("click", function (e) {
-        if (e.target === fenetreConnexion) {
-            fenetreConnexion.style.display = "none";
-        }
+    btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        alert("OK BOUTON ENTRER CLIQUÉ");
+        modal.style.display = "flex";
     });
 
 });
