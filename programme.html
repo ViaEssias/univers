@@ -237,25 +237,22 @@
 
 </div>
 
-    
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-    // INITIALISATION EMAILJS
     emailjs.init("LuuzRHbPFKT_7Ao1w");
 
+    // ===== CONTACT =====
     const btnContact = document.getElementById("btn-contact");
     const fenetreContact = document.getElementById("fenetre-contact");
     const btnAnnuler = document.getElementById("annuler-contact");
     const form = fenetreContact.querySelector("form");
 
-    // OUVRIR MODALE
     btnContact.addEventListener("click", function (e) {
         e.preventDefault();
         fenetreContact.style.display = "flex";
     });
 
-    // FERMER MODALE
     btnAnnuler.addEventListener("click", function () {
         fenetreContact.style.display = "none";
     });
@@ -266,7 +263,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // ENVOI EMAIL
     form.addEventListener("submit", function (e) {
         e.preventDefault();
 
@@ -287,54 +283,34 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Erreur lors de l'envoi du message");
             console.log(error);
         });
+    });
 
+    // ===== CONNEXION =====
+    const btnEntrer = document.getElementById("btn-entrer");
+    const fenetreConnexion = document.getElementById("fenetre-connexion");
+    const btnAnnulerConnexion = document.getElementById("annuler-connexion");
+    const btnEntrerConnexion = document.getElementById("entrer-connexion");
+
+    btnEntrer.addEventListener("click", function (e) {
+        e.preventDefault();
+        fenetreConnexion.style.display = "flex";
+    });
+
+    btnAnnulerConnexion.addEventListener("click", function () {
+        fenetreConnexion.style.display = "none";
+    });
+
+    btnEntrerConnexion.addEventListener("click", function () {
+        fenetreConnexion.style.display = "none";
+    });
+
+    window.addEventListener("click", function (e) {
+        if (e.target === fenetreConnexion) {
+            fenetreConnexion.style.display = "none";
+        }
     });
 
 });
-
-const btnEntrer =
-document.getElementById("btn-entrer");
-
-const fenetreConnexion =
-document.getElementById("fenetre-connexion");
-
-const btnAnnulerConnexion =
-document.getElementById("annuler-connexion");
-
-const btnEntrerConnexion =
-document.getElementById("entrer-connexion");
-
-btnEntrer.addEventListener("click", function(e) {
-
-    e.preventDefault();
-
-    alert("Le bouton ENTRER fonctionne");
-
-});
-
-btnAnnulerConnexion.addEventListener("click", function() {
-
-fenetreConnexion.style.display = "none";
-
-});
-
-btnEntrerConnexion.addEventListener("click", function() {
-
-fenetreConnexion.style.display = "none";
-
-});
-
-window.addEventListener("click", function(e) {
-
-if (e.target === fenetreConnexion) {
-
-    fenetreConnexion.style.display = "none";
-
-}
-
-});
-
-    
 </script>
 
 </body>
