@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Programme du Cheminant</title>
+
+    <link rel="stylesheet" href="programme.css">
+
+</head>
+
+<body>
+
+    <div class="conteneur-programme">
+
+        <header class="programme-header">
+
+            <h1>
+                Programme du Cheminant
+            </h1>
+
+        </header>
+
+        <main class="programme-main">
+
+            <section class="programme-contenu">
+
+                <div class="programme-logo">
+
+                    <img
+                        src="cheminant.png"
+                        alt="Logo du Programme du Cheminant"
+                    >
+
+                </div>
+
+                <div class="programme-texte">
+
+                    <p>
+                        Le Chemin commence là où l'intention devient acte.
+                    </p>
+
+                    <p>
+                        La valeur du parcours réside dans le travail intérieur qu'il rend possible,
+                        bien au-delà des ressources qui sont offertes.
+                        Il n'y a ni adhésion, ni accumulation, ni certitudes,
+                        ni réponses définitives.
+                        Ce qui sera reçu dépendra toujours de ce qui sera mis en œuvre.
+                    </p>
+
+                    <p>
+                        Le Programme du Cheminant se veut un cadre de progression destiné
+                        à soutenir la démarche personnelle d'Accomplissement.
+                    </p>
+
+                    <p>
+                        Rien ne remplace l'expérience vécue pour forger la capacité
+                        à transformer progressivement la compréhension en manière d'être.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <section class="programme-actions">
+
+                <a href="#" class="btn-programme">
+                    ENTRER
+                </a>
+
+                <a href="#" class="btn-programme">
+                    CRÉER COMPTE
+                </a>
+
+                <a href="#" class="btn-programme">
+                    CONTACTER LES ADMINISTRATEURS
+                </a>
+
+            </section>
+
+        </main>
+
+        <footer class="footer-retour">
+
+            <a href="index.html">
+                ← Retour à l'accueil
+            </a>
+
+        </footer>
+
+        <div class="programme-footer">
+
+            <div class="footer-logo">
+
+                <img
+                    src="programme_logo_simple.png"
+                    alt="Programme du Cheminant"
+                >
+
+            </div>
+
+            <div id="date-du-jour" class="footer-date"></div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        const jours = [
+            "Dimanche",
+            "Lundi",
+            "Mardi",
+            "Mercredi",
+            "Jeudi",
+            "Vendredi",
+            "Samedi"
+        ];
+
+        const mois = [
+            "janvier",
+            "février",
+            "mars",
+            "avril",
+            "mai",
+            "juin",
+            "juillet",
+            "août",
+            "septembre",
+            "octobre",
+            "novembre",
+            "décembre"
+        ];
+
+        const aujourdhui = new Date();
+
+        document.getElementById("date-du-jour").textContent =
+            jours[aujourdhui.getDay()] + " " +
+            aujourdhui.getDate() + " " +
+            mois[aujourdhui.getMonth()] + " " +
+            aujourdhui.getFullYear();
+
+    </script>
+
+</body>
+
+</html>
