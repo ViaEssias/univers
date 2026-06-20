@@ -307,39 +307,31 @@ document.getElementById("entrer-connexion");
 
 btnEntrer.addEventListener("click", function(e) {
 
-```
 e.preventDefault();
 
 fenetreConnexion.style.display = "flex";
-```
 
 });
 
 btnAnnulerConnexion.addEventListener("click", function() {
 
-```
 fenetreConnexion.style.display = "none";
-```
 
 });
 
 btnEntrerConnexion.addEventListener("click", function() {
 
-```
 fenetreConnexion.style.display = "none";
-```
 
 });
 
 window.addEventListener("click", function(e) {
 
-```
 if (e.target === fenetreConnexion) {
 
     fenetreConnexion.style.display = "none";
 
 }
-```
 
 });
 
