@@ -119,158 +119,29 @@
         </div>
 
     <script>
+document.addEventListener("DOMContentLoaded", function () {
 
-        const jours = [
-            "Dimanche",
-            "Lundi",
-            "Mardi",
-            "Mercredi",
-            "Jeudi",
-            "Vendredi",
-            "Samedi"
-        ];
+    const btnContact = document.getElementById("btn-contact");
+    const fenetreContact = document.getElementById("fenetre-contact");
+    const btnAnnuler = document.getElementById("annuler-contact");
 
-        const mois = [
-            "janvier",
-            "février",
-            "mars",
-            "avril",
-            "mai",
-            "juin",
-            "juillet",
-            "août",
-            "septembre",
-            "octobre",
-            "novembre",
-            "décembre"
-        ];
+    btnContact.addEventListener("click", function (e) {
+        e.preventDefault();
+        fenetreContact.style.display = "flex";
+    });
 
-        const aujourdhui = new Date();
-
-        document.getElementById("date-du-jour").textContent =
-            jours[aujourdhui.getDay()] + " " +
-            aujourdhui.getDate() + " " +
-            mois[aujourdhui.getMonth()] + " " +
-            aujourdhui.getFullYear();
-
-        <form action="envoyer_message.php" method="POST">
-
-            <div class="modal-corps">
-
-                <div class="modal-gauche">
-
-                    <p>
-                        Cet espace vous permet de transmettre aux administrateurs
-                        toute remarque concernant la plateforme.<br>
-                        Aucune identification n’est demandée.<br>
-                        Par conséquent, aucune réponse ne pourra être assurée.<br>
-                        Votre message sera pris en considération.<br>
-                        Les administrateurs vous remercient de votre contribution.
-                    </p>
-
-                    <div class="ligne-objet">
-
-                        <label for="objet">
-                            Objet :
-                        </label>
-
-                        <select id="objet" name="objet" required>
-
-                            <option value="">
-                                Sélectionnez l'objet
-                            </option>
-
-                            <option value="Difficulté technique">
-                                Difficulté technique
-                            </option>
-
-                            <option value="Erreur">
-                                Erreur
-                            </option>
-
-                            <option value="Suggestion">
-                                Suggestion
-                            </option>
-
-                            <option value="Autre">
-                                Autre
-                            </option>
-
-                        </select>
-
-                    </div>
-
-                </div>
-
-                <div class="modal-droite">
-
-                    <label for="message">
-                        Votre message
-                    </label>
-
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="10"
-                        required>
-                    </textarea>
-
-                </div>
-
-            </div>
-
-            <div class="modal-actions">
-
-                <button type="submit">
-                    Envoyer
-                </button>
-
-                <button type="button" id="annuler-contact">
-                    Annuler
-                </button>
-
-            </div>
-
-        </form>
-
-    </div>
-
-</div>
-
-        const btnContact =
-    document.getElementById("btn-contact");
-
-const fenetreContact =
-    document.getElementById("fenetre-contact");
-
-const btnAnnuler =
-    document.getElementById("annuler-contact");
-
-btnContact.addEventListener("click", function(e) {
-
-    e.preventDefault();
-
-    fenetreContact.style.display = "flex";
-
-});
-
-btnAnnuler.addEventListener("click", function() {
-
-    fenetreContact.style.display = "none";
-
-});
-
-window.addEventListener("click", function(e) {
-
-    if (e.target === fenetreContact) {
-
+    btnAnnuler.addEventListener("click", function () {
         fenetreContact.style.display = "none";
+    });
 
-    }
+    window.addEventListener("click", function (e) {
+        if (e.target === fenetreContact) {
+            fenetreContact.style.display = "none";
+        }
+    });
 
 });
-   
-    </script>
+</script>
 
 </body>
 
