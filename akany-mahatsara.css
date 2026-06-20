@@ -4,8 +4,20 @@
    Compatible avec style.css
    ========================================================== */
 
+/* ==========================
+   RESET / OVERRIDES PAGE AKANY
+   ========================== */
+
 .akany-section {
     margin-bottom: 40px;
+}
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.akany-section p {
+    margin-bottom: 20px;
 }
 
 /* ==========================
