@@ -152,17 +152,19 @@ body {
 
     display: inline-block;
 
-    padding: 14px 36px;
+    padding: 10px 22px;
 
-    text-decoration: none;
+    background: transparent;
+
+    color: var(--indigo);
 
     border: 2px solid var(--indigo);
 
     border-radius: 8px;
 
-    color: var(--indigo);
+    text-decoration: none;
 
-    transition: 0.3s;
+    font-size: 0.95rem;
 
 }
 
