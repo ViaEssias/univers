@@ -270,7 +270,7 @@ document.getElementById("btn-envoyer-message");
 
 if (btnEnvoyerMessage) {
 
-    btnEnvoyerMessage.addEventListener("click", function () {
+   btnEnvoyerMessage.addEventListener("click", function () {
 
     const message =
     document.getElementById("message").value.trim();
@@ -284,31 +284,29 @@ if (btnEnvoyerMessage) {
     }
 
     emailjs.send(
-            "service_1vupdge",
-            "template_u8ds37g",
-            {
-                objet: document.getElementById("objet").value,
-                message: document.getElementById("message").value
-            }
-        )
+        "service_1vupdge",
+        "template_u8ds37g",
+        {
+            objet: document.getElementById("objet").value,
+            message: message
+        }
+    )
 
-        .then(function () {
+    .then(function () {
 
-            alert("Message envoyé avec succès !");
+        alert("Message envoyé avec succès !");
 
-            fenetreContact.style.display = "none";
+        fenetreContact.style.display = "none";
 
-            form.reset();
+        form.reset();
 
-        })
+    })
 
-        .catch(function (error) {
+    .catch(function (error) {
 
-            alert("Erreur lors de l'envoi du message");
+        alert("Erreur lors de l'envoi du message");
 
-            console.log(error);
-
-        });
+        console.log(error);
 
     });
 
