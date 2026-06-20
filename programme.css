@@ -429,3 +429,25 @@ strong {
     color: white;
 
 }
+#fenetre-connexion .modal-contact-contenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#fenetre-connexion .ligne-objet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+#fenetre-connexion .ligne-objet label {
+    width: 120px;
+    text-align: right;
+}
+
+#fenetre-connexion .ligne-objet input {
+    width: 200px;
+}
