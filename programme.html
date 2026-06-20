@@ -239,7 +239,7 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-    emailjs.init("LuuzRHbPFKT_7Ao1w");
+    console.log("SCRIPT OK");
 
     // ===== CONTACT =====
     const btnContact = document.getElementById("btn-contact");
@@ -279,35 +279,42 @@ document.addEventListener("DOMContentLoaded", function () {
             form.reset();
         })
         .catch(function (error) {
-    alert("Erreur lors de l'envoi du message");
-    console.log(error);
-});
+            console.log(error);
+        });
     });
 
-const btnEntrer = document.getElementById("btn-entrer");
-const fenetreConnexion = document.getElementById("fenetre-connexion");
-const btnAnnulerConnexion = document.getElementById("annuler-connexion");
-const btnEntrerConnexion = document.getElementById("entrer-connexion");
+    // ===== CONNEXION =====
+    const btnEntrer = document.getElementById("btn-entrer");
+    const fenetreConnexion = document.getElementById("fenetre-connexion");
+    const btnAnnulerConnexion = document.getElementById("annuler-connexion");
+    const btnEntrerConnexion = document.getElementById("entrer-connexion");
 
-btnEntrer.addEventListener("click", function (e) {
-    e.preventDefault();
-    fenetreConnexion.style.display = "flex";
-});
-
-btnAnnulerConnexion.addEventListener("click", function () {
-    fenetreConnexion.style.display = "none";
-});
-
-btnEntrerConnexion.addEventListener("click", function () {
-    fenetreConnexion.style.display = "none";
-});
-
-window.addEventListener("click", function (e) {
-    if (e.target === fenetreConnexion) {
-        fenetreConnexion.style.display = "none";
+    if (!btnEntrer || !fenetreConnexion) {
+        console.log("ERREUR ELEMENTS CONNEXION");
+        return;
     }
-});
 
+    btnEntrer.addEventListener("click", function (e) {
+        e.preventDefault();
+        console.log("CLICK ENTRER");
+        fenetreConnexion.style.display = "flex";
+    });
+
+    btnAnnulerConnexion.addEventListener("click", function () {
+        fenetreConnexion.style.display = "none";
+    });
+
+    btnEntrerConnexion.addEventListener("click", function () {
+        fenetreConnexion.style.display = "none";
+    });
+
+    window.addEventListener("click", function (e) {
+        if (e.target === fenetreConnexion) {
+            fenetreConnexion.style.display = "none";
+        }
+    });
+
+});
 </script>
 
 </body>
