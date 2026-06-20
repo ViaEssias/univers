@@ -239,22 +239,28 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-    console.log("SCRIPT OK");
+    console.log("SCRIPT CHARGÉ OK");
 
-    // ===== CONTACT =====
+    // =========================
+    // CONTACT
+    // =========================
     const btnContact = document.getElementById("btn-contact");
     const fenetreContact = document.getElementById("fenetre-contact");
-    const btnAnnuler = document.getElementById("annuler-contact");
+    const btnAnnulerContact = document.getElementById("annuler-contact");
     const form = fenetreContact.querySelector("form");
 
-    btnContact.addEventListener("click", function (e) {
-        e.preventDefault();
-        fenetreContact.style.display = "flex";
-    });
+    if (btnContact && fenetreContact) {
+        btnContact.addEventListener("click", function (e) {
+            e.preventDefault();
+            fenetreContact.style.display = "flex";
+        });
+    }
 
-    btnAnnuler.addEventListener("click", function () {
-        fenetreContact.style.display = "none";
-    });
+    if (btnAnnulerContact) {
+        btnAnnulerContact.addEventListener("click", function () {
+            fenetreContact.style.display = "none";
+        });
+    }
 
     window.addEventListener("click", function (e) {
         if (e.target === fenetreContact) {
@@ -262,51 +268,36 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    form.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        emailjs.send(
-            "service_1vupdge",
-            "template_u8ds37g",
-            {
-                objet: document.getElementById("objet").value,
-                message: document.getElementById("message").value
-            }
-        )
-        .then(function () {
-            alert("Message envoyé avec succès !");
-            fenetreContact.style.display = "none";
-            form.reset();
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
-    });
-
-    // ===== CONNEXION =====
+    // =========================
+    // CONNEXION
+    // =========================
     const btnEntrer = document.getElementById("btn-entrer");
     const fenetreConnexion = document.getElementById("fenetre-connexion");
     const btnAnnulerConnexion = document.getElementById("annuler-connexion");
     const btnEntrerConnexion = document.getElementById("entrer-connexion");
 
-    if (!btnEntrer || !fenetreConnexion) {
-        console.log("ERREUR ELEMENTS CONNEXION");
-        return;
+    console.log("BTN ENTRER =", btnEntrer);
+    console.log("MODAL CONNEXION =", fenetreConnexion);
+
+    if (btnEntrer && fenetreConnexion) {
+        btnEntrer.addEventListener("click", function (e) {
+            e.preventDefault();
+            console.log("CLICK ENTRER OK");
+            fenetreConnexion.style.display = "flex";
+        });
     }
 
-    btnEntrer.addEventListener("click", function (e) {
-        e.preventDefault();
-        console.log("CLICK ENTRER");
-        fenetreConnexion.style.display = "flex";
-    });
+    if (btnAnnulerConnexion) {
+        btnAnnulerConnexion.addEventListener("click", function () {
+            fenetreConnexion.style.display = "none";
+        });
+    }
 
-    btnAnnulerConnexion.addEventListener("click", function () {
-        fenetreConnexion.style.display = "none";
-    });
-
-    btnEntrerConnexion.addEventListener("click", function () {
-        fenetreConnexion.style.display = "none";
-    });
+    if (btnEntrerConnexion) {
+        btnEntrerConnexion.addEventListener("click", function () {
+            fenetreConnexion.style.display = "none";
+        });
+    }
 
     window.addEventListener("click", function (e) {
         if (e.target === fenetreConnexion) {
