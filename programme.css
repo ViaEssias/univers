@@ -445,9 +445,6 @@ strong {
 #fenetre-connexion .ligne-objet input {
     width: 200px;
 }
-#fenetre-connexion.modal-contact {
-    display: flex;
-}
 
 #fenetre-connexion form {
     width: 100%;
@@ -455,7 +452,4 @@ strong {
 #fenetre-connexion .modal-contact-contenu {
     width: 380px;
     border-radius: 10px;
-}
-#fenetre-connexion {
-    display: none;
 }
