@@ -170,11 +170,12 @@
 
 </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
+    // INITIALISATION EMAILJS
     emailjs.init("LuuzRHbPFKT_7Ao1w");
 
     const btnContact = document.getElementById("btn-contact");
@@ -182,13 +183,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const btnAnnuler = document.getElementById("annuler-contact");
     const form = fenetreContact.querySelector("form");
 
-    // Ouvrir modale
+    // OUVRIR MODALE
     btnContact.addEventListener("click", function (e) {
         e.preventDefault();
         fenetreContact.style.display = "flex";
     });
 
-    // Fermer modale
+    // FERMER MODALE
     btnAnnuler.addEventListener("click", function () {
         fenetreContact.style.display = "none";
     });
@@ -203,17 +204,21 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        emailjs.send("TON_SERVICE_ID", "TON_TEMPLATE_ID", {
-            objet: document.getElementById("objet").value,
-            message: document.getElementById("message").value
-        })
+        emailjs.send(
+            "service_1vupdge",
+            "template_u8ds37g",
+            {
+                objet: document.getElementById("objet").value,
+                message: document.getElementById("message").value
+            }
+        )
         .then(function () {
             alert("Message envoyé avec succès !");
             fenetreContact.style.display = "none";
             form.reset();
         })
         .catch(function (error) {
-            alert("Erreur lors de l'envoi");
+            alert("Erreur lors de l'envoi du message");
             console.log(error);
         });
 
