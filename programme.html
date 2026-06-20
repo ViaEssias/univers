@@ -272,7 +272,18 @@ if (btnEnvoyerMessage) {
 
     btnEnvoyerMessage.addEventListener("click", function () {
 
-        emailjs.send(
+    const message =
+    document.getElementById("message").value.trim();
+
+    if (message === "") {
+
+        alert("Veuillez saisir un message.");
+
+        return;
+
+    }
+
+    emailjs.send(
             "service_1vupdge",
             "template_u8ds37g",
             {
