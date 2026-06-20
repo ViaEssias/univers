@@ -424,11 +424,6 @@ strong {
     color: white;
 
 }
-#fenetre-connexion .modal-contact-contenu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 #fenetre-connexion .ligne-objet {
     display: flex;
@@ -450,10 +445,6 @@ strong {
     display: flex;
 }
 
-#fenetre-connexion .modal-contact-contenu {
-    width: 380px !important;
-}
-
 #fenetre-connexion form {
     width: 100%;
 }
@@ -461,6 +452,7 @@ strong {
     width: 380px;
     border-radius: 10px;
 }
+}
 #fenetre-connexion {
-    display: none !important;
+    display: none;
 }
