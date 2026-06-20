@@ -549,16 +549,13 @@
    FOOTER AKANY
    ========================================================== */
 
-
-.footer-retour {
-
-    text-align: center;
-
-    margin: 40px 0;
-
+.valeurs-grid {
+    gap: 15px;
 }
 
-
+.footer-retour {
+    margin: 30px 0;
+}
 
 .footer-retour a {
 
