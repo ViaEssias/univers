@@ -1,0 +1,265 @@
+/* ==========================================================
+   PROGRAMME DU CHEMINANT
+   ========================================================== */
+
+:root {
+
+    --indigo: #1B1035;
+    --or: #F2E3A0;
+
+}
+
+/* ==========================================================
+   BASE
+   ========================================================== */
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+
+    background: white;
+
+    font-family:
+        "Georgia",
+        "Times New Roman",
+        serif;
+
+    color: var(--indigo);
+
+}
+
+.conteneur-programme {
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* ==========================================================
+   BANDEAU
+   ========================================================== */
+
+.programme-header {
+
+    background-image: url("fond_indigo.png");
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+}
+
+.programme-header h1 {
+
+    font-size: 3.5rem;
+
+    letter-spacing: 8px;
+
+    font-weight: normal;
+
+    color: var(--or);
+
+    text-shadow:
+        0 0 10px rgba(242, 227, 160, 0.6),
+        0 0 25px rgba(242, 227, 160, 0.4),
+        0 0 45px rgba(242, 227, 160, 0.25);
+
+}
+
+/* ==========================================================
+   CONTENU
+   ========================================================== */
+
+.programme-main {
+
+    flex: 1;
+
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 70px auto;
+
+}
+
+.programme-contenu {
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 80px;
+
+}
+
+.programme-logo img {
+
+    width: 280px;
+
+    height: auto;
+
+}
+
+.programme-texte {
+
+    max-width: 650px;
+
+}
+
+.programme-texte p {
+
+    font-size: 1.2rem;
+
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+
+    color: var(--indigo);
+
+}
+
+/* ==========================================================
+   BOUTONS
+   ========================================================== */
+
+.programme-actions {
+
+    margin-top: 60px;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+}
+
+.btn-programme {
+
+    display: inline-block;
+
+    padding: 14px 36px;
+
+    text-decoration: none;
+
+    border: 2px solid var(--indigo);
+
+    border-radius: 8px;
+
+    color: var(--indigo);
+
+    transition: 0.3s;
+
+}
+
+.btn-programme:hover {
+
+    opacity: 0.8;
+
+}
+
+/* ==========================================================
+   RETOUR
+   ========================================================== */
+
+.footer-retour {
+
+    text-align: center;
+
+    margin: 50px 0;
+
+}
+
+.footer-retour a {
+
+    text-decoration: none;
+
+    color: var(--indigo);
+
+    font-size: 1rem;
+
+}
+
+.footer-retour a:hover {
+
+    opacity: 0.8;
+
+}
+
+/* ==========================================================
+   PIED DE PAGE
+   ========================================================== */
+
+.programme-footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px 40px;
+
+    border-top: 1px solid rgba(27, 16, 53, 0.2);
+
+}
+
+.footer-logo img {
+
+    width: 90px;
+
+    height: auto;
+
+}
+
+.footer-date {
+
+    font-size: 0.95rem;
+
+    color: var(--indigo);
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 900px) {
+
+    .programme-contenu {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+    .programme-header h1 {
+
+        font-size: 2.5rem;
+
+        letter-spacing: 5px;
+
+    }
+
+    .programme-logo img {
+
+        width: 220px;
+
+    }
+
+}
