@@ -451,3 +451,10 @@ strong {
 #fenetre-connexion .ligne-objet input {
     width: 200px;
 }
+#fenetre-connexion .modal-contact-contenu {
+    padding: 0;
+}
+
+#fenetre-connexion form {
+    width: 100%;
+}
