@@ -239,6 +239,14 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
+const btnEntrer = document.getElementById("btn-entrer");
+const fenetreConnexion = document.getElementById("fenetre-connexion");
+
+btnEntrer.addEventListener("click", function(e) {
+    e.preventDefault();
+    fenetreConnexion.style.display = "flex";
+});
+
     emailjs.init("LuuzRHbPFKT_7Ao1w");
 
     // ===== CONTACT =====
