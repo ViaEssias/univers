@@ -129,6 +129,13 @@ body {
     color: var(--indigo);
 
 }
+strong {
+
+    color: var(--couleur-or);
+
+    font-weight: normal;
+
+}
 
 /* ==========================================================
    BOUTONS
