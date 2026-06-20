@@ -233,7 +233,6 @@
     </form>
 
 </div>
-```
 
 </div>
 
@@ -280,9 +279,9 @@ document.addEventListener("DOMContentLoaded", function () {
             form.reset();
         })
         .catch(function (error) {
-            fenetreConnexion.style.display = "flex";
-            console.log(error);
-        });
+    alert("Erreur lors de l'envoi du message");
+    console.log(error);
+});
     });
 
     // ===== CONNEXION =====
