@@ -1,3 +1,4 @@
+```css
 /* ==========================================================
    PROGRAMME DU CHEMINANT
    ========================================================== */
@@ -18,6 +19,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+}
+
+html,
+body {
+
+    height: 100%;
 
 }
 
@@ -57,7 +65,7 @@ body {
 
     text-align: center;
 
-    padding: 20px 20px;
+    padding: 20px;
 
 }
 
@@ -89,7 +97,11 @@ body {
     width: 90%;
     max-width: 1200px;
 
-    margin: 25px auto;
+    margin: 15px auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
 }
 
@@ -122,16 +134,27 @@ body {
 
     font-size: 1.2rem;
 
-    line-height: 1.9;
+    line-height: 1.7;
 
-    margin-bottom: 25px;
+    margin-bottom: 18px;
 
     color: var(--indigo);
 
 }
-strong {
 
-    color: var(--couleur-or);
+.texte-or {
+
+    color: var(--or);
+
+    text-shadow:
+        0 0 5px rgba(242, 227, 160, 0.35),
+        0 0 12px rgba(242, 227, 160, 0.25);
+
+    font-weight: normal;
+
+}
+
+strong {
 
     font-weight: normal;
 
@@ -143,7 +166,7 @@ strong {
 
 .programme-actions {
 
-    margin-top: 60px;
+    margin-top: 20px;
 
     display: flex;
 
@@ -186,7 +209,11 @@ strong {
    ========================================================== */
 
 .footer-retour {
-    margin: 25px 0;
+
+    margin: 15px 0;
+
+    text-align: center;
+
 }
 
 .footer-retour a {
@@ -217,7 +244,7 @@ strong {
 
     align-items: center;
 
-   padding: 10px 25px;
+    padding: 10px 25px;
 
     border-top: 1px solid rgba(27, 16, 53, 0.2);
 
@@ -251,6 +278,8 @@ strong {
 
         text-align: center;
 
+        gap: 25px;
+
     }
 
     .programme-header h1 {
@@ -267,4 +296,11 @@ strong {
 
     }
 
+    .programme-main {
+
+        margin: 10px auto;
+
+    }
+
 }
+```
