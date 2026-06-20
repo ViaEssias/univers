@@ -458,3 +458,6 @@ strong {
 #fenetre-connexion form {
     width: 100%;
 }
+#fenetre-connexion .modal-contact-contenu {
+    width: 400px;
+}
