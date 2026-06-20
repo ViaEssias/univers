@@ -281,15 +281,9 @@ main {
 
 }
 
-
-
-section {
-
+section:not(.akany-section) {
     margin-bottom: var(--espace-section);
-
 }
-
-
 
 /* ==========================================================
    BOUTONS COMMUNS
