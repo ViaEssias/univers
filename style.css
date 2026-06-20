@@ -14,6 +14,10 @@
     box-sizing: border-box;
 }
 
+section:not(.akany-section) {
+    margin-bottom: var(--espace-section);
+}
+
 
 /* ==========================
    VARIABLES GÉNÉRALES
@@ -279,10 +283,6 @@ main {
 
     width: 100%;
 
-}
-
-section:not(.akany-section) {
-    margin-bottom: var(--espace-section);
 }
 
 /* ==========================================================
