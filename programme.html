@@ -170,18 +170,25 @@
 
 </div>
 
-    <script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
 document.addEventListener("DOMContentLoaded", function () {
+
+    emailjs.init("TA_PUBLIC_KEY");
 
     const btnContact = document.getElementById("btn-contact");
     const fenetreContact = document.getElementById("fenetre-contact");
     const btnAnnuler = document.getElementById("annuler-contact");
+    const form = fenetreContact.querySelector("form");
 
+    // Ouvrir modale
     btnContact.addEventListener("click", function (e) {
         e.preventDefault();
         fenetreContact.style.display = "flex";
     });
 
+    // Fermer modale
     btnAnnuler.addEventListener("click", function () {
         fenetreContact.style.display = "none";
     });
@@ -190,6 +197,26 @@ document.addEventListener("DOMContentLoaded", function () {
         if (e.target === fenetreContact) {
             fenetreContact.style.display = "none";
         }
+    });
+
+    // ENVOI EMAIL
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        emailjs.send("TON_SERVICE_ID", "TON_TEMPLATE_ID", {
+            objet: document.getElementById("objet").value,
+            message: document.getElementById("message").value
+        })
+        .then(function () {
+            alert("Message envoyé avec succès !");
+            fenetreContact.style.display = "none";
+            form.reset();
+        })
+        .catch(function (error) {
+            alert("Erreur lors de l'envoi");
+            console.log(error);
+        });
+
     });
 
 });
