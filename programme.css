@@ -469,5 +469,5 @@ strong {
     border-radius: 10px;
 }
 #fenetre-connexion {
-    display: none;
+    display: none !important;
 }
