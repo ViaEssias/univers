@@ -4,14 +4,13 @@
    Compatible avec style.css
    ========================================================== */
 
+.akany-section {
+    margin-bottom: 40px;
+}
 
 /* ==========================
    EN-TÊTE AKANY
    ========================== */
-
-.akany-section {
-    margin-bottom: 40px;
-}
 
 .hero {
 
