@@ -76,9 +76,10 @@
                     CRÉER COMPTE
                 </a>
 
-                <a href="#" class="btn-programme">
-                    CONTACTER LES ADMINISTRATEURS
-                </a>
+                <a href="#" class="btn-programme" id="btn-contact">
+    CONTACTER LES ADMINISTRATEURS
+</a>
+
 
             </section>
 
@@ -144,6 +145,131 @@
             mois[aujourdhui.getMonth()] + " " +
             aujourdhui.getFullYear();
 
+        <div id="fenetre-contact" class="modal-contact">
+
+    <div class="modal-contact-contenu">
+
+        <div class="modal-titre">
+            MESSAGE
+        </div>
+
+        <form action="envoyer_message.php" method="POST">
+
+            <div class="modal-corps">
+
+                <div class="modal-gauche">
+
+                    <p>
+                        Cet espace vous permet de transmettre aux administrateurs
+                        toute remarque concernant la plateforme.<br>
+                        Aucune identification n’est demandée.<br>
+                        Par conséquent, aucune réponse ne pourra être assurée.<br>
+                        Votre message sera pris en considération.<br>
+                        Les administrateurs vous remercient de votre contribution.
+                    </p>
+
+                    <div class="ligne-objet">
+
+                        <label for="objet">
+                            Objet :
+                        </label>
+
+                        <select id="objet" name="objet" required>
+
+                            <option value="">
+                                Sélectionnez l'objet
+                            </option>
+
+                            <option value="Difficulté technique">
+                                Difficulté technique
+                            </option>
+
+                            <option value="Erreur">
+                                Erreur
+                            </option>
+
+                            <option value="Suggestion">
+                                Suggestion
+                            </option>
+
+                            <option value="Autre">
+                                Autre
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="modal-droite">
+
+                    <label for="message">
+                        Votre message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="10"
+                        required>
+                    </textarea>
+
+                </div>
+
+            </div>
+
+            <div class="modal-actions">
+
+                <button type="submit">
+                    Envoyer
+                </button>
+
+                <button type="button" id="annuler-contact">
+                    Annuler
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+        const btnContact =
+    document.getElementById("btn-contact");
+
+const fenetreContact =
+    document.getElementById("fenetre-contact");
+
+const btnAnnuler =
+    document.getElementById("annuler-contact");
+
+btnContact.addEventListener("click", function(e) {
+
+    e.preventDefault();
+
+    fenetreContact.style.display = "flex";
+
+});
+
+btnAnnuler.addEventListener("click", function() {
+
+    fenetreContact.style.display = "none";
+
+});
+
+window.addEventListener("click", function(e) {
+
+    if (e.target === fenetreContact) {
+
+        fenetreContact.style.display = "none";
+
+    }
+
+});
+   
     </script>
 
 </body>
