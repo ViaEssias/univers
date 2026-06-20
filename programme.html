@@ -118,6 +118,59 @@
             MESSAGE
         </div>
 
+        <form action="envoyer_message.php" method="POST">
+
+            <div class="modal-corps">
+
+                <div class="modal-gauche">
+
+                    <p>
+                        Cet espace vous permet de transmettre aux administrateurs
+                        toute remarque concernant la plateforme.<br>
+                        Aucune identification n’est demandée.<br>
+                        Votre message sera pris en considération.
+                    </p>
+
+                    <div class="ligne-objet">
+
+                        <label for="objet">Objet :</label>
+
+                        <select id="objet" name="objet" required>
+                            <option value="">Sélectionnez l'objet</option>
+                            <option value="Difficulté technique">Difficulté technique</option>
+                            <option value="Erreur">Erreur</option>
+                            <option value="Suggestion">Suggestion</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="modal-droite">
+
+                    <label for="message">Votre message</label>
+
+                    <textarea id="message" name="message" rows="10" required></textarea>
+
+                </div>
+
+            </div>
+
+            <div class="modal-actions">
+
+                <button type="submit">Envoyer</button>
+
+                <button type="button" id="annuler-contact">Annuler</button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
     <script>
 document.addEventListener("DOMContentLoaded", function () {
 
