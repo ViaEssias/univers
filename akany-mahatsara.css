@@ -26,14 +26,9 @@
    ========================== */
 
 .hero {
-
     text-align: center;
-
-    padding: 90px 20px 70px;
-
+    padding: 90px 20px 30px;
 }
-
-
 
 .hero-logo {
 
@@ -80,18 +75,11 @@
    STRUCTURE DES SECTIONS
    ========================== */
 
-
 .akany-section {
-
     max-width: 1100px;
-
-    margin: 70px auto;
-
+    margin: 40px auto;
     padding: 40px;
-
 }
-
-
 
 .akany-section h2 {
 
