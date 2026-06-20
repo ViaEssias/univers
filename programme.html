@@ -250,6 +250,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const fenetreContact = document.getElementById("fenetre-contact");
     const btnAnnulerContact = document.getElementById("annuler-contact");
     const form = fenetreContact.querySelector("form");
+    
+    emailjs.init("LuuzRHbPFKT_7Ao1w");
 
     if (btnContact && fenetreContact) {
         btnContact.addEventListener("click", function (e) {
@@ -263,6 +265,43 @@ document.addEventListener("DOMContentLoaded", function () {
             fenetreContact.style.display = "none";
         });
     }
+    const btnEnvoyerMessage =
+document.getElementById("btn-envoyer-message");
+
+if (btnEnvoyerMessage) {
+
+    btnEnvoyerMessage.addEventListener("click", function () {
+
+        emailjs.send(
+            "service_1vupdge",
+            "template_u8ds37g",
+            {
+                objet: document.getElementById("objet").value,
+                message: document.getElementById("message").value
+            }
+        )
+
+        .then(function () {
+
+            alert("Message envoyé avec succès !");
+
+            fenetreContact.style.display = "none";
+
+            form.reset();
+
+        })
+
+        .catch(function (error) {
+
+            alert("Erreur lors de l'envoi du message");
+
+            console.log(error);
+
+        });
+
+    });
+
+}
 
     window.addEventListener("click", function (e) {
         if (e.target === fenetreContact) {
