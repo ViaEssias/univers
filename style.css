@@ -265,16 +265,10 @@ img {
    PAGES INTERNES — STRUCTURE COMMUNE
    ========================================================== */
 
-
 .page-header {
-
-    margin-top: 50px;
-
-    margin-bottom: 50px;
-
+    margin-top: 25px;
+    margin-bottom: 15px;
 }
-
-
 
 main {
 
