@@ -280,7 +280,7 @@ document.addEventListener("DOMContentLoaded", function () {
             form.reset();
         })
         .catch(function (error) {
-            alert("Erreur lors de l'envoi du message");
+            fenetreConnexion.style.display = "flex";
             console.log(error);
         });
     });
