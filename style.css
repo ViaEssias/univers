@@ -257,7 +257,9 @@ img {
 
 }
 
-
+.logo-akany {
+    transform: scale(1.10);
+}
 
 .menu-item:hover img {
 
