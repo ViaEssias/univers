@@ -239,7 +239,9 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-    //emailjs.init("LuuzRHbPFKT_7Ao1w");
+    if (typeof emailjs !== "undefined") {
+    emailjs.init("LuuzRHbPFKT_7Ao1w");
+}
     
     console.log("SCRIPT CHARGÉ OK");
 
