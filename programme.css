@@ -478,3 +478,13 @@ strong {
 #fenetre-compte label[for="compte-engagement"] {
     text-align: center;
 }
+#fenetre-compte .bloc-engagement {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+#fenetre-compte .bloc-engagement label {
+    text-align: left;
+}
