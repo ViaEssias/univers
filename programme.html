@@ -236,6 +236,93 @@
 
 </div>
 
+<div id="fenetre-compte" class="modal-contact">
+
+    <div class="modal-contact-contenu">
+
+        <div class="modal-titre">
+            CRÉER COMPTE
+        </div>
+
+        <form>
+
+            <div class="modal-corps">
+
+                <div style="width:100%;">
+
+                    <div class="ligne-objet">
+
+                        <label for="compte-login">
+                            Login :
+                        </label>
+
+                        <input
+                            type="text"
+                            id="compte-login"
+                            name="compte-login"
+                        >
+
+                    </div>
+
+                    <div class="ligne-objet" style="margin-top:20px;">
+
+                        <label for="compte-motdepasse">
+                            Mot de passe :
+                        </label>
+
+                        <input
+                            type="password"
+                            id="compte-motdepasse"
+                            name="compte-motdepasse"
+                        >
+
+                    </div>
+
+                    <div style="margin-top:25px; display:flex; align-items:flex-start; gap:12px;">
+
+                        <input
+                            type="checkbox"
+                            id="compte-engagement"
+                        >
+
+                        <label for="compte-engagement">
+
+                            Je reconnais l’esprit du Programme du Cheminant,
+                            consens librement à entrer dans la démarche
+                            et m’engage à en respecter la confidentialité.
+
+                        </label>
+
+                    </div>
+
+                    <div style="margin-top:25px; text-align:right; font-weight:bold;">
+
+                        Les rubriques sont obligatoires.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="modal-actions">
+
+                <button type="button" id="valider-compte">
+                    Valider
+                </button>
+
+                <button type="button" id="annuler-compte">
+                    Annuler
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
