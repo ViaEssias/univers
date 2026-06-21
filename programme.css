@@ -471,3 +471,7 @@ strong {
 #fenetre-compte .ligne-objet input {
     width: 200px;
 }
+#compte-engagement {
+    width: 28px;
+    height: 28px;
+}
