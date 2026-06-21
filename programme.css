@@ -455,3 +455,19 @@ strong {
     width: 380px;
     border-radius: 10px;
 }
+#fenetre-compte .ligne-objet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+#fenetre-compte .ligne-objet label {
+    width: 120px;
+    text-align: right;
+}
+
+#fenetre-compte .ligne-objet input {
+    width: 200px;
+}
