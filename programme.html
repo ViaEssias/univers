@@ -446,6 +446,46 @@ if (btnEnvoyerMessage) {
     });
 
 });
+
+    // =========================
+// COMPTE
+// =========================
+const btnCompte = document.getElementById("btn-compte");
+const fenetreCompte = document.getElementById("fenetre-compte");
+const btnAnnulerCompte = document.getElementById("annuler-compte");
+
+if (btnCompte && fenetreCompte) {
+
+    btnCompte.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        fenetreCompte.style.display = "flex";
+
+    });
+
+}
+
+if (btnAnnulerCompte) {
+
+    btnAnnulerCompte.addEventListener("click", function () {
+
+        fenetreCompte.style.display = "none";
+
+    });
+
+}
+
+window.addEventListener("click", function (e) {
+
+    if (e.target === fenetreCompte) {
+
+        fenetreCompte.style.display = "none";
+
+    }
+
+});
+    
 </script>
 
 </body>
