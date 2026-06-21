@@ -488,3 +488,6 @@ strong {
 #fenetre-compte .bloc-engagement label {
     text-align: left;
 }
+#message {
+    font-size: 20px;
+}
