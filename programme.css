@@ -475,3 +475,6 @@ strong {
     width: 28px;
     height: 28px;
 }
+#fenetre-compte label[for="compte-engagement"] {
+    text-align: center;
+}
