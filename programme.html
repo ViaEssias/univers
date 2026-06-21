@@ -480,7 +480,30 @@ if (btnValiderCompte) {
 
     btnValiderCompte.addEventListener("click", function () {
 
-        alert("TEST VALIDER");
+        const login =
+        document.getElementById("compte-login").value.trim();
+
+        const motdepasse =
+        document.getElementById("compte-motdepasse").value.trim();
+
+        const engagement =
+        document.getElementById("compte-engagement").checked;
+
+        if (
+            login === "" ||
+            motdepasse === "" ||
+            !engagement
+        ) {
+
+            alert(
+                "Veuillez compléter toutes les rubriques obligatoires."
+            );
+
+            return;
+
+        }
+
+        alert("Compte validé.");
 
     });
 
