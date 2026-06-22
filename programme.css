@@ -244,40 +244,6 @@ strong {
 }
 
 /* ==========================================================
-   PIED DE PAGE
-   ========================================================== */
-
-.programme-footer {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    padding: 10px 25px;
-
-    border-top: 1px solid rgba(27, 16, 53, 0.2);
-
-}
-
-.footer-logo img {
-
-    width: 90px;
-
-    height: auto;
-
-}
-
-.footer-date {
-
-    font-size: 0.95rem;
-
-    color: var(--indigo);
-
-}
-
-/* ==========================================================
    RESPONSIVE
    ========================================================== */
 
