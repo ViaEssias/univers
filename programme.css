@@ -447,6 +447,7 @@ strong {
     height: 100vh;
 }
 
+/* MENU GAUCHE */
 .espace-menu {
     width: 20%;
 
@@ -461,6 +462,16 @@ strong {
     border-right: 1px solid rgba(0, 0, 0, 0.15);
 }
 
+/* ZONE DROITE */
+.espace-lecture {
+    flex: 1;
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    border-left: 1px solid rgba(0, 0, 0, 0.15);
+}
+
 .menu-haut,
 .menu-bas {
     display: flex;
@@ -468,11 +479,6 @@ strong {
     gap: 10px;
 }
 
-/* zone lecture */
-.espace-lecture {
-    flex: 1;
-    border: 1px solid #ccc;
-}
 .footer-retour {
     display: flex;
     justify-content: center;
