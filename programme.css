@@ -512,22 +512,21 @@ strong {
 .texte-contribution {
     font-size: 14px;
 }
+
 html, body {
     height: 100%;
     margin: 0;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-}
-
 .conteneur-programme {
-    flex: 1;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 .espace-footer {
     margin-top: auto;
+}
+.programme-main {
+    flex: 1;
 }
