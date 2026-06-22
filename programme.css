@@ -2,6 +2,11 @@
    PROGRAMME DU CHEMINANT
    ========================================================== */
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 :root {
 
     --indigo: #1B1035;
@@ -518,6 +523,7 @@ html, body {
 }
 
 .conteneur-programme {
+   width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
