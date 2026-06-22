@@ -443,81 +443,27 @@ strong {
     font-size: 15px;
 }
 .espace-prive {
-
     display: flex;
-   min-height: 600px;
-
+    min-height: 600px;
 }
+
 .espace-menu {
-
     width: 20%;
-
-}
-.espace-lecture {
-
-    width: 80%;
-
-}
-.espace-menu {
-
-    width: 20%;
-
     border: 1px solid red;
-
 }
 
 .espace-lecture {
-
     width: 80%;
-
     border: 1px solid blue;
-
-}
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
 }
 
-/* layout principal */
-.espace-prive {
-    display: flex;
-    height: calc(100vh - 80px);
-}
-
-/* MENU */
-.espace-menu {
-    width: 260px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* IMPORTANT */
-    border-right: 1px solid indigo;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-/* menu vertical */
 .menu-haut {
     display: flex;
     flex-direction: column;
-    gap: 8px;
 }
 
-/* liens */
-.espace-menu a {
-    text-decoration: none;
-    color: black;
-    padding: 10px;
-    border-radius: 6px;
-}
-
-.espace-menu a:hover {
-    background: rgba(75, 0, 130, 0.08);
-}
-
-/* LECTURE */
-.espace-lecture {
-    flex: 1;
-    padding: 20px;
-    box-sizing: border-box;
+.menu-bas {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
 }
