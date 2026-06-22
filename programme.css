@@ -507,6 +507,7 @@ strong {
 .espace-prive {
 
     display: flex;
+   min-height: 600px;
 
 }
 .espace-menu {
