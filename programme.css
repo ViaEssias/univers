@@ -543,3 +543,14 @@ html, body {
     flex: 1;
     min-height: 0; /* empêche les blocages de scroll flex */
 }
+.menu-haut a {
+    text-decoration: none;
+}
+.btn-contribution {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 2px solid #F2E3A0;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
