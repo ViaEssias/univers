@@ -490,3 +490,25 @@ strong {
 .footer-retour a {
     text-decoration: none;
 }
+.espace-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px 20px;
+    border-top: 1px solid rgba(0,0,0,0.15);
+
+    text-align: center;
+}
+
+.btn-contribution {
+    text-decoration: none;
+    font-weight: bold;
+    color: inherit;
+}
+
+.texte-contribution {
+    font-size: 14px;
+}
