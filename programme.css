@@ -442,15 +442,15 @@ strong {
 #objet {
     font-size: 15px;
 }
+
 .espace-prive {
     display: flex;
     height: 100vh;
 }
 
-/* ZONE GAUCHE */
+/* GAUCHE */
 .espace-menu {
     width: 20%;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -459,17 +459,17 @@ strong {
     padding: 20px;
     box-sizing: border-box;
 
-    border-right: 1px solid rgba(0, 0, 0, 0.25);
+    border-right: 1px solid #999;
 }
 
-/* ZONE DROITE */
+/* DROITE */
 .espace-lecture {
     flex: 1;
 
     padding: 20px;
     box-sizing: border-box;
 
-    border-left: 1px solid rgba(0, 0, 0, 0.25);
+    border-left: 1px solid #999;
 }
 
 .menu-haut,
