@@ -444,10 +444,9 @@ strong {
 }
 .espace-prive {
     display: flex;
-    height: 100vh; /* important : donne une vraie hauteur */
+    height: 100vh;
 }
 
-/* MENU */
 .espace-menu {
     width: 20%;
     border: 1px solid red;
@@ -455,13 +454,13 @@ strong {
     display: flex;
     flex-direction: column;
 
-    justify-content: space-between; /* <-- clé du système */
+    justify-content: space-between;
+
     height: 100%;
     padding: 20px;
     box-sizing: border-box;
 }
 
-/* blocs */
 .menu-haut,
 .menu-bas {
     display: flex;
