@@ -549,7 +549,7 @@ html, body {
 .btn-contribution {
     display: inline-block;
     padding: 8px 16px;
-    border: 2px solid #F2E3A0;
+    border: 2px solid currentColor;
     border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
