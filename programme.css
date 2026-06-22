@@ -446,12 +446,13 @@ strong {
     display: flex;
     min-height: 600px;
 }
-
 .espace-menu {
     width: 20%;
     border: 1px solid red;
-}
 
+    display: flex;
+    flex-direction: column;
+}
 .espace-lecture {
     width: 80%;
     border: 1px solid blue;
