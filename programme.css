@@ -442,10 +442,10 @@ strong {
 #objet {
     font-size: 15px;
 }
-
 .espace-prive {
     display: flex;
-    height: 100vh;
+    flex: 1;
+    min-height: 0;
 }
 
 /* GAUCHE */
@@ -455,21 +455,21 @@ strong {
     flex-direction: column;
     justify-content: space-between;
 
-    height: 100%;
     padding: 20px;
     box-sizing: border-box;
 
-    border-right: 1px solid #999;
+    border-right: 1px solid rgba(0,0,0,0.15);
+
+    overflow-y: auto; /* IMPORTANT : pas de contenu caché */
 }
 
 /* DROITE */
 .espace-lecture {
     flex: 1;
-
     padding: 20px;
     box-sizing: border-box;
 
-    border-left: 1px solid #999;
+    overflow-y: auto;
 }
 
 .menu-haut,
@@ -496,11 +496,11 @@ strong {
     align-items: center;
 
     gap: 15px;
-
     padding: 15px 20px;
+
     border-top: 1px solid rgba(0,0,0,0.15);
 
-    text-align: center;
+    flex-shrink: 0; /* IMPORTANT : ne compresse pas le footer */
 }
 
 .btn-contribution {
@@ -512,7 +512,6 @@ strong {
 .texte-contribution {
     font-size: 14px;
 }
-
 html, body {
     height: 100%;
     margin: 0;
@@ -523,6 +522,7 @@ html, body {
     display: flex;
     flex-direction: column;
 }
+
 .espace-footer {
     position: fixed;
     bottom: 0;
@@ -539,7 +539,8 @@ html, body {
     border-top: 1px solid rgba(0,0,0,0.15);
     background: white;
 }
-
 .programme-main {
+    display: flex;
     flex: 1;
+    min-height: 0; /* empêche les blocages de scroll flex */
 }
