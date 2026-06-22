@@ -535,3 +535,54 @@ strong {
     border: 1px solid blue;
 
 }
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* bloc principal plein écran */
+.espace-prive {
+    display: flex;
+    height: calc(100vh - 80px); /* ajuste si ton bandeau est différent */
+    width: 100%;
+}
+
+/* MENU */
+.espace-menu {
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid indigo;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* zones menu */
+.menu-haut,
+.menu-bas {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* liens */
+.espace-menu a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+/* hover */
+.espace-menu a:hover {
+    background: rgba(75, 0, 130, 0.08);
+}
+
+/* LECTURE */
+.espace-lecture {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
