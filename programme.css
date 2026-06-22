@@ -509,3 +509,13 @@ strong {
     display: flex;
 
 }
+.espace-menu {
+
+    width: 20%;
+
+}
+.espace-lecture {
+
+    width: 80%;
+
+}
