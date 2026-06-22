@@ -504,3 +504,8 @@ strong {
 #objet {
     font-size: 15px;
 }
+.espace-prive {
+
+    display: flex;
+
+}
