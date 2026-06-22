@@ -472,20 +472,11 @@ strong {
     overflow-y: auto;
 }
 
-.menu-haut {
-    display: flex;
-    gap: 25px;
-    padding-bottom: 15px;
-}
-
+.menu-haut,
 .menu-bas {
     display: flex;
-}
-
-.zone-gauche {
-    flex: 1;
-    border: 1px solid rgba(0,0,0,0.15);
-    margin-top: 10px;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .footer-retour {
@@ -501,25 +492,15 @@ strong {
 }
 .espace-footer {
     display: flex;
+    justify-content: center;
     align-items: center;
 
-    gap: 20px;
-
-    padding: 12px 0;
+    gap: 15px;
+    padding: 15px 20px;
 
     border-top: 1px solid rgba(0,0,0,0.15);
-}
 
-.btn-notification {
-    text-decoration: none;
-    color: inherit;
-}
-
-.btn-parametres {
-    margin-left: auto;
-
-    text-decoration: none;
-    color: inherit;
+    flex-shrink: 0; /* IMPORTANT : ne compresse pas le footer */
 }
 
 .btn-contribution {
