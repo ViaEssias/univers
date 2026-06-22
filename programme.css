@@ -444,27 +444,33 @@ strong {
 }
 .espace-prive {
     display: flex;
-    min-height: 600px;
+    height: 100vh; /* important : donne une vraie hauteur */
 }
+
+/* MENU */
 .espace-menu {
     width: 20%;
     border: 1px solid red;
 
     display: flex;
     flex-direction: column;
-}
-.espace-lecture {
-    width: 80%;
-    border: 1px solid blue;
+
+    justify-content: space-between; /* <-- clé du système */
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.menu-haut {
-    display: flex;
-    flex-direction: column;
-}
-
+/* blocs */
+.menu-haut,
 .menu-bas {
     display: flex;
     flex-direction: column;
-    margin-top: auto;
+    gap: 10px;
+}
+
+/* zone lecture */
+.espace-lecture {
+    flex: 1;
+    border: 1px solid #ccc;
 }
