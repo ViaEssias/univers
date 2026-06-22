@@ -434,11 +434,33 @@ if (btnEnvoyerMessage) {
     }
 
     if (btnEntrerConnexion) {
+
     btnEntrerConnexion.addEventListener("click", function () {
+
+        const login =
+        document.getElementById("login").value.trim();
+
+        const motdepasse =
+        document.getElementById("motdepasse").value.trim();
+
+        if (
+            login === "" ||
+            motdepasse === ""
+        ) {
+
+            alert(
+                "Les rubriques sont obligatoires."
+            );
+
+            return;
+
+        }
 
         window.location.href = "espace.html";
 
     });
+
+}
 }
 
     window.addEventListener("click", function (e) {
