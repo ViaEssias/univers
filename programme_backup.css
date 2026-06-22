@@ -216,68 +216,6 @@ strong {
 
 
 /* ==========================================================
-   RETOUR
-   ========================================================== */
-
-.footer-retour {
-
-    margin: 15px 0;
-
-    text-align: center;
-
-}
-
-.footer-retour a {
-
-    text-decoration: none;
-
-    color: var(--indigo);
-
-    font-size: 1rem;
-
-}
-
-.footer-retour a:hover {
-
-    opacity: 0.8;
-
-}
-
-/* ==========================================================
-   PIED DE PAGE
-   ========================================================== */
-
-.programme-footer {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    padding: 10px 25px;
-
-    border-top: 1px solid rgba(27, 16, 53, 0.2);
-
-}
-
-.footer-logo img {
-
-    width: 90px;
-
-    height: auto;
-
-}
-
-.footer-date {
-
-    font-size: 0.95rem;
-
-    color: var(--indigo);
-
-}
-
-/* ==========================================================
    RESPONSIVE
    ========================================================== */
 
@@ -505,33 +443,99 @@ strong {
     font-size: 15px;
 }
 .espace-prive {
-
     display: flex;
-   min-height: 600px;
-
+    flex: 1;
+    min-height: 0;
 }
+
+/* GAUCHE */
 .espace-menu {
-
     width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
+    padding: 20px;
+    box-sizing: border-box;
+
+    border-right: 1px solid rgba(0,0,0,0.15);
+
+    overflow-y: auto; /* IMPORTANT : pas de contenu caché */
 }
+
+/* DROITE */
 .espace-lecture {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
 
-    width: 80%;
-
-}
-.espace-menu {
-
-    width: 20%;
-
-    border: 1px solid red;
-
+    overflow-y: auto;
 }
 
-.espace-lecture {
+.menu-haut,
+.menu-bas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
-    width: 80%;
+.footer-retour {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    border: 1px solid blue;
+    padding: 20px 0;
+}
 
+.footer-retour a {
+    text-decoration: none;
+}
+.espace-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+    padding: 15px 20px;
+
+    border-top: 1px solid rgba(0,0,0,0.15);
+
+    flex-shrink: 0; /* IMPORTANT : ne compresse pas le footer */
+}
+
+.btn-contribution {
+    text-decoration: none;
+    font-weight: bold;
+    color: inherit;
+}
+
+.texte-contribution {
+    font-size: 14px;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.conteneur-programme {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.espace-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+    padding: 15px 20px;
+
+    border-top: 1px solid rgba(0,0,0,0.15);
+    background: white;
+}
+.programme-main {
+    display: flex;
+    flex: 1;
+    min-height: 0; /* empêche les blocages de scroll flex */
 }
