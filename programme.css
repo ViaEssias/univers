@@ -519,3 +519,18 @@ strong {
     width: 80%;
 
 }
+.espace-menu {
+
+    width: 20%;
+
+    border: 1px solid red;
+
+}
+
+.espace-lecture {
+
+    width: 80%;
+
+    border: 1px solid blue;
+
+}
