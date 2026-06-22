@@ -474,3 +474,14 @@ strong {
     flex: 1;
     border: 1px solid #ccc;
 }
+.footer-retour {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px 0;
+}
+
+.footer-retour a {
+    text-decoration: none;
+}
