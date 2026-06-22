@@ -539,14 +539,12 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden;
 }
 
-/* bloc principal plein écran (SANS CONFLIT) */
+/* layout principal */
 .espace-prive {
     display: flex;
-    height: calc(100vh - 80px); /* ajuste si ton bandeau change */
-    width: 100%;
+    height: calc(100vh - 80px);
 }
 
 /* MENU */
@@ -554,15 +552,14 @@ html, body {
     width: 260px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start; /* IMPORTANT */
     border-right: 1px solid indigo;
     padding: 10px;
     box-sizing: border-box;
 }
 
-/* zones menu */
-.menu-haut,
-.menu-bas {
+/* menu vertical */
+.menu-haut {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -585,36 +582,4 @@ html, body {
     flex: 1;
     padding: 20px;
     box-sizing: border-box;
-}
-
-/* FOOTER */
-.espace-footer {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    border-top: 1px solid indigo;
-    box-sizing: border-box;
-}
-
-.footer-left { flex: 1; text-align: left; }
-.footer-center {
-    flex: 2;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-    align-items: center;
-}
-.footer-right { flex: 1; text-align: right; }
-
-.espace-footer a {
-    text-decoration: none;
-    color: black;
-}
-
-.footer-text {
-    font-size: 12px;
-    opacity: 0.7;
 }
