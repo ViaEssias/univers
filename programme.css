@@ -548,6 +548,7 @@ html, body {
 }
 .menu-haut a {
     text-decoration: none;
+    color: var(--indigo);
 }
 .btn-contribution {
     display: inline-block;
