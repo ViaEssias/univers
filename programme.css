@@ -578,3 +578,28 @@ html, body {
     margin: auto;
     max-width: 100%;
 }
+.popover {
+    position: absolute;
+    top: 50px; /* à ajuster selon ton menu */
+    left: 250px; /* à ajuster pour alignement sous "Documents publics" */
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    display: none;
+    z-index: 1000;
+    min-width: 180px;
+}
+
+.popover button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+.popover button:hover {
+    background: #f2f2f2;
+}
