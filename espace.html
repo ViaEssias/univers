@@ -137,5 +137,141 @@ document.addEventListener("click", function (e) {
 
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    console.log("SCRIPT MODALES OK");
+
+    // =====================================================
+    // OUTILS
+    // =====================================================
+    function ouvrir(modal) {
+        if (modal) modal.style.display = "flex";
+    }
+
+    function fermer(modal) {
+        if (modal) modal.style.display = "none";
+    }
+
+    // =====================================================
+    // CONTACT
+    // =====================================================
+    const fenetreContact = document.getElementById("fenetre-contact");
+    const btnAnnulerContact = document.getElementById("annuler-contact");
+    const btnEnvoyerMessage = document.getElementById("btn-envoyer-message");
+
+    if (btnAnnulerContact) {
+        btnAnnulerContact.addEventListener("click", function () {
+            fermer(fenetreContact);
+        });
+    }
+
+    if (btnEnvoyerMessage) {
+        btnEnvoyerMessage.addEventListener("click", function () {
+
+            const message = document.getElementById("message").value.trim();
+
+            if (!message) {
+                alert("Message vide.");
+                return;
+            }
+
+            alert("Message envoyé (simulation)");
+            fermer(fenetreContact);
+        });
+    }
+
+    // =====================================================
+    // CONNEXION
+    // =====================================================
+    const fenetreConnexion = document.getElementById("fenetre-connexion");
+    const btnAnnulerConnexion = document.getElementById("annuler-connexion");
+    const btnEntrerConnexion = document.getElementById("entrer-connexion");
+
+    if (btnAnnulerConnexion) {
+        btnAnnulerConnexion.addEventListener("click", function () {
+            fermer(fenetreConnexion);
+        });
+    }
+
+    if (btnEntrerConnexion) {
+        btnEntrerConnexion.addEventListener("click", function () {
+
+            const login = document.getElementById("login").value.trim();
+            const mdp = document.getElementById("motdepasse").value.trim();
+
+            if (!login || !mdp) {
+                alert("Remplis les champs.");
+                return;
+            }
+
+            alert("Connexion OK (simulation)");
+            fermer(fenetreConnexion);
+        });
+    }
+
+    // =====================================================
+    // COMPTE
+    // =====================================================
+    const fenetreCompte = document.getElementById("fenetre-compte");
+    const btnAnnulerCompte = document.getElementById("annuler-compte");
+    const btnValiderCompte = document.getElementById("valider-compte");
+
+    if (btnAnnulerCompte) {
+        btnAnnulerCompte.addEventListener("click", function () {
+            fermer(fenetreCompte);
+        });
+    }
+
+    if (btnValiderCompte) {
+        btnValiderCompte.addEventListener("click", function () {
+
+            const login = document.getElementById("compte-login").value.trim();
+            const mdp = document.getElementById("compte-motdepasse").value.trim();
+            const ok = document.getElementById("compte-engagement").checked;
+
+            if (!login || !mdp || !ok) {
+                alert("Compléter tous les champs.");
+                return;
+            }
+
+            alert("Compte validé (simulation)");
+            fermer(fenetreCompte);
+        });
+    }
+
+    // =====================================================
+    // OUVERTURE (IMPORTANT)
+    // =====================================================
+    const btnContact = document.getElementById("btn-contact");
+    const btnConnexion = document.getElementById("btn-connexion");
+    const btnCompte = document.getElementById("btn-compte");
+
+    if (btnContact) {
+        btnContact.addEventListener("click", () => ouvrir(fenetreContact));
+    }
+
+    if (btnConnexion) {
+        btnConnexion.addEventListener("click", () => ouvrir(fenetreConnexion));
+    }
+
+    if (btnCompte) {
+        btnCompte.addEventListener("click", () => ouvrir(fenetreCompte));
+    }
+
+    // =====================================================
+    // FERMETURE HORS MODAL
+    // =====================================================
+    window.addEventListener("click", function (e) {
+
+        if (e.target === fenetreContact) fermer(fenetreContact);
+        if (e.target === fenetreConnexion) fermer(fenetreConnexion);
+        if (e.target === fenetreCompte) fermer(fenetreCompte);
+
+    });
+
+});
+</script>
+
 </body>
 </html>
