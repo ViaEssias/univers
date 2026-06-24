@@ -499,12 +499,16 @@ window.addEventListener("click", function (e) {
 
 function ouvrirPDF(fichier) {
 
-    document.getElementById("lecteur-pdf").src = fichier;
+    const viewer = document.getElementById("lecteur-pdf");
+
+    if (viewer) {
+        viewer.src = fichier;
+    }
 
 }
 
 </script>
-
+        
 <script>
 
 document.addEventListener("contextmenu", function(event) {
