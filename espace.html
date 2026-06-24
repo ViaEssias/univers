@@ -516,9 +516,18 @@ window.addEventListener("click", function (e) {
 
 function ouvrirPDF(fichier) {
 
-    document.getElementById("lecteur-pdf").src = fichier;
+    const viewer = document.getElementById("lecteur-pdf");
 
+    if (viewer) {
+        viewer.src = fichier;
+    }
+
+    const pop = document.getElementById("documents-popover");
+    if (pop) {
+        pop.style.display = "none";
+    }
 }
+
 });
 
 </script>
@@ -559,19 +568,6 @@ function toggleDocumentsPopover() {
     } else {
         pop.style.display = "block";
     }
-
-}
-
-function ouvrirPDF(fichier) {
-
-    // ⚠️ ici on relie à ton espace lecture (iframe ou canvas selon ton choix actuel)
-    const viewer = document.getElementById("lecteur-pdf");
-
-    if (viewer) {
-        viewer.src = fichier;
-    }
-
-    document.getElementById("documents-popover").style.display = "none";
 
 }
 
