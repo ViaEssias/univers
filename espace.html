@@ -342,15 +342,17 @@ document.addEventListener("DOMContentLoaded", function () {
     // =========================
     // POPUP DOCUMENTS
     // =========================
+
     window.toggleDocumentsPopover = function () {
 
-        const pop = document.getElementById("documents-popover");
+    const pop = document.getElementById("documents-popover");
 
-        if (!pop) return;
+    if (!pop) return;
 
-        pop.style.display =
-            (pop.style.display === "block") ? "none" : "block";
-    };
+    const isVisible = getComputedStyle(pop).display !== "none";
+
+    pop.style.display = isVisible ? "none" : "block";
+};
 
     document.addEventListener("click", function (event) {
 
