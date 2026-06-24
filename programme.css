@@ -573,3 +573,8 @@ html, body {
 .espace-lecture {
     user-select: none;
 }
+#pdf-canvas {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+}
