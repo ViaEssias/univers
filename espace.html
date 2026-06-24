@@ -15,333 +15,93 @@
 
 <body>
 
-    <div class="conteneur-programme">
+<div class="conteneur-programme">
 
-        <header class="programme-header">
+    <header class="programme-header">
 
-            <h1>
-                Programme du Cheminant
-            </h1>
+        <h1>Programme du Cheminant</h1>
 
-            <h2>
-                Vous êtes sur votre espace.<br>
-                Que chaque connexion soit un pas de plus vers l’Accomplissement !
-            </h2>
+        <h2>
+            Vous êtes sur votre espace.<br>
+            Que chaque connexion soit un pas de plus vers l’Accomplissement !
+        </h2>
 
-        </header>
+    </header>
 
-        <main class="programme-main">
+    <main class="programme-main">
 
-<div class="espace-prive">
+        <div class="espace-prive">
 
-    <!-- COLONNE GAUCHE -->
-    <aside class="espace-menu">
+            <!-- COLONNE GAUCHE -->
+            <aside class="espace-menu">
 
-        <div class="menu-haut">
+                <div class="menu-haut">
 
-            <a href="index.html">Accueil</a>
-            <a href="#" onclick="ouvrirPDF('pdf/vademecum.pdf'); return false;">Vademecum</a>
-            <a href="#" onclick="toggleDocumentsPopover(); return false;">
-                Documents publics
-            </a>
-            <a href="#">Notifications</a>
-            <a href="#">Paramètres</a>
+                    <a href="index.html">Accueil</a>
 
-        </div>
+                    <a href="#" onclick="ouvrirPDF('pdf/vademecum.pdf'); return false;">
+                        Vademecum
+                    </a>
 
-       <div id="documents-popover" class="popover">
-            <button onclick="ouvrirPDF('pdf/charte.pdf')">Charte</button>
-            <button onclick="ouvrirPDF('pdf/connaissance.pdf')">Connaissance</button>
-            <button onclick="ouvrirPDF('pdf/vie_consacree.pdf')">Vie consacrée</button>
-        </div>
+                    <a href="#" onclick="toggleDocumentsPopover(); return false;">
+                        Documents publics
+                    </a>
 
-        <div class="zone-gauche">
-
-        </div>
-
-    </aside>
-
-    <!-- ZONE DE LECTURE -->
-<section class="espace-lecture">
-
-    <iframe
-        id="lecteur-pdf"
-        src=""
-        title="Lecteur PDF">
-    </iframe>
-
-</section>
-
-</div>
-
-<footer class="espace-footer">
-
-    <a
-        href="https://www.paypal.com/ncp/payment/9GT9UB95GYZCE"
-        class="btn-contribution"
-        target="_blank"
-    >
-        CONTRIBUTION
-    </a>
-
-    <span class="texte-contribution">
-        Le Programme du Cheminant existe et se perpétue grâce à la contribution volontaire de ceux qui reconnaissent la valeur de sa transmission.
-    </span>
-
-    </footer>       
-
-</main>
-
-            
-    <div id="fenetre-contact" class="modal-contact">
-
-    <div class="modal-contact-contenu">
-
-        <div class="modal-titre">
-            MESSAGE
-        </div>
-
-        <form>
-
-            <div class="modal-corps">
-
-                <div class="modal-gauche">
-
-                    <p>
-                        Cet espace vous permet de transmettre aux administrateurs
-                        toute remarque concernant la plateforme.<br>
-                        Aucune identification n’est demandée.<br>
-                        Votre message sera pris en considération.
-                    </p>
-
-                    <div class="ligne-objet">
-
-                        <label for="objet">Objet :</label>
-
-                        <select id="objet" name="objet" required>
-                            <option value="Difficulté technique">Difficulté technique</option>
-                            <option value="Erreur">Erreur</option>
-                            <option value="Suggestion">Suggestion</option>
-                            <option value="Autre">Autre</option>
-                        </select>
-
-                    </div>
+                    <a href="#">Notifications</a>
+                    <a href="#">Paramètres</a>
 
                 </div>
 
-                <div class="modal-droite">
+                <!-- POPOVER -->
+                <div id="documents-popover" class="popover">
 
-                    <label for="message">Votre message</label>
-
-                    <textarea id="message" name="message" rows="10" required></textarea>
-
-                </div>
-
-            </div>
-
-            <div class="modal-actions">
-
-                <button type="button" id="btn-envoyer-message">Envoyer</button>
-
-                <button type="button" id="annuler-contact">Annuler</button>
-
-            </div>
-
-        </form>
-
-    </div>
-
-</div>
-
-   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-<div id="fenetre-connexion" class="modal-contact">
-
-<div class="modal-contact-contenu">
-
-    <div class="modal-titre">
-        CONNEXION
-    </div>
-
-    <form>
-
-        <div class="modal-corps">
-
-            <div style="width:100%;">
-
-                <div class="ligne-objet">
-
-                    <label for="login">
-                        Login
-                    </label>
-
-                    <input
-                        type="text"
-                        id="login"
-                        name="login"
-                    >
+                    <button onclick="ouvrirPDF('pdf/charte.pdf')">Charte</button>
+                    <button onclick="ouvrirPDF('pdf/connaissance.pdf')">Connaissance</button>
+                    <button onclick="ouvrirPDF('pdf/vie_consacree.pdf')">Vie consacrée</button>
 
                 </div>
 
-                <div class="ligne-objet" style="margin-top:20px;">
+                <div class="zone-gauche"></div>
 
-                    <label for="motdepasse">
-                        Mot de passe
-                    </label>
+            </aside>
 
-                    <input
-                        type="text"
-                        id="motdepasse"
-                        name="motdepasse"
-                    >
+            <!-- ZONE DE LECTURE -->
+            <section class="espace-lecture">
 
-                </div>
+                <iframe
+                    id="lecteur-pdf"
+                    src=""
+                    title="Lecteur PDF">
+                </iframe>
 
-            </div>
+            </section>
 
         </div>
 
-        <div class="modal-actions">
+    </main>
 
-            <button type="button" id="entrer-connexion">
-                Entrer
-            </button>
+    <footer class="espace-footer">
 
-            <button type="button" id="annuler-connexion">
-                Annuler
-            </button>
+        <a href="https://www.paypal.com/ncp/payment/9GT9UB95GYZCE"
+           class="btn-contribution"
+           target="_blank">
+            CONTRIBUTION
+        </a>
 
-        </div>
+        <span class="texte-contribution">
+            Le Programme du Cheminant existe et se perpétue grâce à la contribution volontaire de ceux qui reconnaissent la valeur de sa transmission.
+        </span>
 
-    </form>
-
-</div>
-
-</div>
-
-<div id="fenetre-compte" class="modal-contact">
-
-    <div class="modal-contact-contenu">
-
-        <div class="modal-titre">
-            CRÉER COMPTE
-        </div>
-
-        <form>
-
-            <div class="modal-corps">
-
-                <div style="width:100%;">
-
-                    <div class="ligne-objet">
-
-                        <label for="compte-login">
-                            Login
-                        </label>
-
-                        <input
-                            type="text"
-                            id="compte-login"
-                            name="compte-login"
-                        >
-
-                    </div>
-
-                    <div class="ligne-objet" style="margin-top:20px;">
-
-                        <label for="compte-motdepasse">
-                            Mot de passe
-                        </label>
-
-                        <input
-                            type="text"
-                            id="compte-motdepasse"
-                            name="compte-motdepasse"
-                        >
-
-                    </div>
-
-                    <div style="margin-top:25px; display:flex; justify-content:center; align-items:flex-start; gap:12px;">
-
-                        <input
-                            type="checkbox"
-                            id="compte-engagement"
-                        >
-
-                        <label for="compte-engagement">
-
-                            Je reconnais l’esprit du Programme du Cheminant,
-                            consens librement à entrer dans la démarche<br>
-                            et m’engage à en respecter la confidentialité.
-
-                        </label>
-
-                    </div>
-
-                    <div style="margin-top:25px; text-align:right; font-weight:bold;">
-
-                        Les rubriques sont obligatoires.
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="modal-actions">
-
-                <button type="button" id="valider-compte">
-                    Valider
-                </button>
-
-                <button type="button" id="annuler-compte">
-                    Annuler
-                </button>
-
-            </div>
-
-        </form>
-
-    </div>
+    </footer>
 
 </div>
 
+<!-- SCRIPTS -->
 <script>
 
-document.addEventListener("DOMContentLoaded", function () {
+console.log("SCRIPT OK");
 
-    console.log("SCRIPT OK");
-
-    // =========================
-    // PDF
-    // =========================
-    window.ouvrirPDF = function (fichier) {
-
-        const viewer = document.getElementById("lecteur-pdf");
-
-        if (viewer) {
-            viewer.src = fichier;
-        }
-
-        const pop = document.getElementById("documents-popover");
-        if (pop) {
-            pop.style.display = "none";
-        }
-    };
-
-    // =========================
-    // POPUP DOCUMENTS
-    // =========================
-
-   window.toggleDocumentsPopover = function () {
-
-    const pop = document.getElementById("documents-popover");
-    if (!pop) return;
-
-    const isOpen = pop.style.display === "block";
-    pop.style.display = isOpen ? "none" : "block";
-};
-
+// OUVRIR PDF
 window.ouvrirPDF = function (fichier) {
 
     const viewer = document.getElementById("lecteur-pdf");
@@ -351,6 +111,17 @@ window.ouvrirPDF = function (fichier) {
     if (pop) pop.style.display = "none";
 };
 
+// TOGGLE POPOVER
+window.toggleDocumentsPopover = function () {
+
+    const pop = document.getElementById("documents-popover");
+    if (!pop) return;
+
+    const visible = getComputedStyle(pop).display !== "none";
+    pop.style.display = visible ? "none" : "block";
+};
+
+// FERMETURE CLIC EXTÉRIEUR
 document.addEventListener("click", function (e) {
 
     const pop = document.getElementById("documents-popover");
@@ -361,10 +132,10 @@ document.addEventListener("click", function (e) {
     if (!pop.contains(e.target) && !bouton) {
         pop.style.display = "none";
     }
+
 });
 
 </script>
 
 </body>
-
 </html>
