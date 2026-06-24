@@ -358,7 +358,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (!pop) return;
 
-        if (!pop.contains(event.target)) {
+        if (pop.style.display === "block" && !pop.contains(event.target)) {
             pop.style.display = "none";
         }
 
