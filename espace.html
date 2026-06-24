@@ -315,268 +315,52 @@
 </div>
 
 <script>
+
 document.addEventListener("DOMContentLoaded", function () {
 
-    if (typeof emailjs !== "undefined") {
-    emailjs.init("LuuzRHbPFKT_7Ao1w");
-}
-    
-    console.log("SCRIPT CHARGÉ OK");
+    console.log("SCRIPT OK");
 
     // =========================
-    // CONTACT
+    // PDF
     // =========================
-    const btnContact = document.getElementById("btn-contact");
-    const fenetreContact = document.getElementById("fenetre-contact");
-    const btnAnnulerContact = document.getElementById("annuler-contact");
-    const form = fenetreContact.querySelector("form");
-    
-    emailjs.init("LuuzRHbPFKT_7Ao1w");
+    window.ouvrirPDF = function (fichier) {
 
-    if (btnContact && fenetreContact) {
-        btnContact.addEventListener("click", function (e) {
-            e.preventDefault();
-            fenetreContact.style.display = "flex";
-        });
-    }
+        const viewer = document.getElementById("lecteur-pdf");
 
-    if (btnAnnulerContact) {
-        btnAnnulerContact.addEventListener("click", function () {
-            fenetreContact.style.display = "none";
-        });
-    }
-    const btnEnvoyerMessage =
-document.getElementById("btn-envoyer-message");
-
-if (btnEnvoyerMessage) {
-
-   btnEnvoyerMessage.addEventListener("click", function () {
-
-    const message =
-    document.getElementById("message").value.trim();
-
-    if (message === "") {
-
-        alert("Veuillez saisir votre message.");
-
-        return;
-
-    }
-
-    emailjs.send(
-        "service_1vupdge",
-        "template_u8ds37g",
-        {
-            objet: document.getElementById("objet").value,
-            message: message
+        if (viewer) {
+            viewer.src = fichier;
         }
-    )
 
-    .then(function () {
-
-        alert("Message envoyé avec succès !");
-
-        fenetreContact.style.display = "none";
-
-        form.reset();
-
-    })
-
-    .catch(function (error) {
-
-        alert("Erreur lors de l'envoi du message");
-
-        console.log(error);
-
-    });
-});
-
-}
-
-    window.addEventListener("click", function (e) {
-        if (e.target === fenetreContact) {
-            fenetreContact.style.display = "none";
+        const pop = document.getElementById("documents-popover");
+        if (pop) {
+            pop.style.display = "none";
         }
-    });
+    };
 
     // =========================
-    // CONNEXION
+    // POPUP DOCUMENTS
     // =========================
-    const btnEntrer = document.getElementById("btn-entrer");
-    const fenetreConnexion = document.getElementById("fenetre-connexion");
-    const btnAnnulerConnexion = document.getElementById("annuler-connexion");
-    const btnEntrerConnexion = document.getElementById("entrer-connexion");
+    window.toggleDocumentsPopover = function () {
 
-    console.log("BTN ENTRER =", btnEntrer);
-    console.log("MODAL CONNEXION =", fenetreConnexion);
+        const pop = document.getElementById("documents-popover");
 
-    if (btnEntrer && fenetreConnexion) {
-        btnEntrer.addEventListener("click", function (e) {
-            e.preventDefault();
-            console.log("CLICK ENTRER OK");
-            fenetreConnexion.style.display = "flex";
-        });
-    }
+        if (!pop) return;
 
-    if (btnAnnulerConnexion) {
-        btnAnnulerConnexion.addEventListener("click", function () {
-            fenetreConnexion.style.display = "none";
-        });
-    }
+        pop.style.display =
+            (pop.style.display === "block") ? "none" : "block";
+    };
 
-    if (btnEntrerConnexion) {
-        btnEntrerConnexion.addEventListener("click", function () {
-            fenetreConnexion.style.display = "none";
-        });
-    }
+    document.addEventListener("click", function (event) {
 
-    window.addEventListener("click", function (e) {
-        if (e.target === fenetreConnexion) {
-            fenetreConnexion.style.display = "none";
-        }
-    });
+        const pop = document.getElementById("documents-popover");
 
-// =========================
-// COMPTE
-// =========================
-const btnCompte = document.getElementById("btn-compte");
-const fenetreCompte = document.getElementById("fenetre-compte");
-const btnAnnulerCompte = document.getElementById("annuler-compte");
-const btnValiderCompte = document.getElementById("valider-compte");
-console.log("BTN VALIDER =", btnValiderCompte);
+        if (!pop) return;
 
-if (btnCompte && fenetreCompte) {
-
-    btnCompte.addEventListener("click", function (e) {
-
-        e.preventDefault();
-
-        fenetreCompte.style.display = "flex";
-
-    });
-
-}
-
-if (btnAnnulerCompte) {
-
-    btnAnnulerCompte.addEventListener("click", function () {
-
-        fenetreCompte.style.display = "none";
-
-    });
-
-}
-
-if (btnValiderCompte) {
-
-    btnValiderCompte.addEventListener("click", function () {
-
-        const login =
-        document.getElementById("compte-login").value.trim();
-
-        const motdepasse =
-        document.getElementById("compte-motdepasse").value.trim();
-
-        const engagement =
-        document.getElementById("compte-engagement").checked;
-
-        if (
-            login === "" ||
-            motdepasse === "" ||
-            !engagement
-        ) {
-
-            alert(
-                "Veuillez compléter toutes les rubriques."
-            );
-
-            return;
-
+        if (!pop.contains(event.target)) {
+            pop.style.display = "none";
         }
 
-        alert("Compte validé.");
-
     });
-
-}
-
-window.addEventListener("click", function (e) {
-
-    if (e.target === fenetreCompte) {
-
-        fenetreCompte.style.display = "none";
-
-    }
-
-});
-    
-</script>
-
-<script>
-
-function ouvrirPDF(fichier) {
-
-    const viewer = document.getElementById("lecteur-pdf");
-
-    if (viewer) {
-        viewer.src = fichier;
-    }
-
-    const pop = document.getElementById("documents-popover");
-    if (pop) {
-        pop.style.display = "none";
-    }
-}
-
-</script>
-
-<script>
-
-document.addEventListener("contextmenu", function(event) {
-    event.preventDefault();
-});
-
-</script>
-
-<script>
-
-document.addEventListener("keydown", function(event) {
-
-    if (
-        event.key === "F12" ||
-        (event.ctrlKey && event.shiftKey && event.key === "I") ||
-        (event.ctrlKey && event.shiftKey && event.key === "J") ||
-        (event.ctrlKey && event.key === "U")
-    ) {
-        event.preventDefault();
-    }
-
-});
-
-</script>
-
-<script>
-
-function toggleDocumentsPopover() {
-
-    const pop = document.getElementById("documents-popover");
-
-    if (pop.style.display === "block") {
-        pop.style.display = "none";
-    } else {
-        pop.style.display = "block";
-    }
-
-}
-
-// fermer si clic ailleurs
-document.addEventListener("click", function(event) {
-
-    const pop = document.getElementById("documents-popover");
-
-    if (!pop.contains(event.target)) {
-        pop.style.display = "none";
-    }
 
 });
 
