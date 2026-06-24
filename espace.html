@@ -54,13 +54,16 @@
     </aside>
 
     <!-- ZONE DE LECTURE -->
-
 <section class="espace-lecture">
 
-    <canvas id="pdf-canvas"></canvas>
+    <iframe
+        id="lecteur-pdf"
+        src=""
+        title="Lecteur PDF">
+    </iframe>
 
 </section>
-    
+
 </div>
 
 <footer class="espace-footer">
@@ -499,16 +502,12 @@ window.addEventListener("click", function (e) {
 
 function ouvrirPDF(fichier) {
 
-    const viewer = document.getElementById("lecteur-pdf");
-
-    if (viewer) {
-        viewer.src = fichier;
-    }
+    document.getElementById("lecteur-pdf").src = fichier;
 
 }
 
 </script>
-        
+
 <script>
 
 document.addEventListener("contextmenu", function(event) {
@@ -531,67 +530,6 @@ document.addEventListener("keydown", function(event) {
     }
 
 });
-
-</script>
-
-<script type="module">
-
-import * as pdfjsLib from 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/5.4.54/pdf.min.mjs';
-
-pdfjsLib.GlobalWorkerOptions.workerSrc =
-'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/5.4.54/pdf.worker.min.mjs';
-
-const url = 'pdf/vademecum.pdf';
-
-const pdf = await pdfjsLib.getDocument(url).promise;
-
-const page = await pdf.getPage(1);
-
-const scale = 1.5;
-
-const viewport = page.getViewport({ scale });
-
-const canvas = document.getElementById('pdf-canvas');
-
-const context = canvas.getContext('2d');
-
-canvas.height = viewport.height;
-canvas.width = viewport.width;
-
-await page.render({
-    canvasContext: context,
-    viewport: viewport
-}).promise;
-
-</script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-
-<script>
-
-pdfjsLib.GlobalWorkerOptions.workerSrc =
-"https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
-
-async function ouvrirPDF(fichier) {
-
-    const pdf = await pdfjsLib.getDocument(fichier).promise;
-    const page = await pdf.getPage(1);
-
-    const scale = 1.5;
-    const viewport = page.getViewport({ scale });
-
-    const canvas = document.getElementById("pdf-canvas");
-    const ctx = canvas.getContext("2d");
-
-    canvas.width = viewport.width;
-    canvas.height = viewport.height;
-
-    await page.render({
-        canvasContext: ctx,
-        viewport: viewport
-    }).promise;
-
-}
 
 </script>
 
