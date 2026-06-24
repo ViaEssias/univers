@@ -579,11 +579,16 @@ html, body {
     max-width: 100%;
 }
 .popover {
-    display: block;
-    background: yellow;
-    border: 3px solid red;
-    padding: 20px;
-
+    position: fixed;
+    top: 220px;
+    left: 40px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    display: none;
+    z-index: 99999;
+    min-width: 220px;
 }
 .popover button {
     width: 100%;
