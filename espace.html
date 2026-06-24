@@ -93,45 +93,51 @@
 
 </div>
 
-<!-- SCRIPTS -->
 <script>
+document.addEventListener("DOMContentLoaded", function () {
 
-console.log("SCRIPT OK");
-
-// OUVRIR PDF
-window.ouvrirPDF = function (fichier) {
-
+    const pop = document.getElementById("documents-popover");
     const viewer = document.getElementById("lecteur-pdf");
-    if (viewer) viewer.src = fichier;
+    const btnDocs = document.querySelector('[onclick*="toggleDocumentsPopover"]');
 
-    const pop = document.getElementById("documents-popover");
-    if (pop) pop.style.display = "none";
-};
-
-// TOGGLE POPOVER
-window.toggleDocumentsPopover = function () {
-
-    const pop = document.getElementById("documents-popover");
-    if (!pop) return;
-
-    const visible = getComputedStyle(pop).display !== "none";
-    pop.style.display = visible ? "none" : "block";
-};
-
-// FERMETURE CLIC EXTÉRIEUR
-document.addEventListener("click", function (e) {
-
-    const pop = document.getElementById("documents-popover");
-    if (!pop) return;
-
-    const bouton = e.target.closest('[onclick*="toggleDocumentsPopover"]');
-
-    if (!pop.contains(e.target) && !bouton) {
-        pop.style.display = "none";
+    // OUVRIR PDF
+    function ouvrirPDF(fichier) {
+        if (viewer) viewer.src = fichier;
+        if (pop) pop.style.display = "none";
     }
 
-});
+    // TOGGLE POPOVER
+    function togglePopover() {
+        if (!pop) return;
+        pop.style.display = (pop.style.display === "block") ? "none" : "block";
+    }
 
+    // CLICK bouton menu
+    if (btnDocs) {
+        btnDocs.addEventListener("click", function (e) {
+            e.preventDefault();
+            togglePopover();
+        });
+    }
+
+    // CLICK boutons PDF
+    if (pop) {
+        pop.querySelectorAll("button").forEach(btn => {
+            btn.addEventListener("click", function () {
+                const pdf = this.getAttribute("onclick")?.match(/'(.*?)'/)?.[1];
+                if (pdf) ouvrirPDF(pdf);
+            });
+        });
+    }
+
+    // clic extérieur
+    document.addEventListener("click", function (e) {
+        if (!pop) return;
+        if (!pop.contains(e.target) && !e.target.closest('[onclick*="toggleDocumentsPopover"]')) {
+            pop.style.display = "none";
+        }
+    });
+    
 </script>
 
 <script>
