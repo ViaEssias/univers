@@ -1,1 +1,536 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Univers : Programme du Cheminant</title>
+
+    <link rel="stylesheet" href="programme.css">
+    <link rel="icon" href="favicon.png">
+
+</head>
+
+<body>
+
+    <div class="conteneur-programme">
+
+        <header class="programme-header">
+
+            <h1>
+                Programme du Cheminant
+            </h1>
+
+        </header>
+
+        <main class="programme-main">
+
+            <section class="programme-contenu">
+
+                <div class="programme-logo">
+
+                    <img
+                        src="cheminant_indigo.png"
+                        alt="Logo du Programme du Cheminant"
+                    >
+
+                </div>
+
+                <div class="programme-texte">
+
+                    <p>
+                        Le Chemin commence là où l’intention devient acte.
+                    </p>
+
+                    <p>
+                        La valeur du parcours réside dans le travail intérieur qu’il rend possible,
+                        bien au-delà des ressources qui sont offertes.
+                        Il n’y a ni adhésion, ni accumulation, ni certitudes,
+                        ni réponses définitives.
+                        Ce qui sera reçu dépendra toujours de ce qui sera mis en œuvre.
+                    </p>
+
+                    <p>
+                        Le <strong class="texte-or">Programme du Cheminant</strong>
+                        se veut un cadre destiné
+                        à soutenir la démarche personnelle d’Accomplissement.
+                    </p>
+
+                    <p>
+                        Rien ne remplace l’expérience vécue pour forger la capacité
+                        à transformer progressivement la compréhension en manière d’être.
+                    </p>
+
+                </div>
+
+            </section>
+
+            <section class="programme-actions">
+
+                <a href="#" class="btn-programme" id="btn-entrer">
+                    ENTRER
+                </a>
+
+                <a href="#" class="btn-programme" id="btn-compte">
+    CRÉER COMPTE
+</a>
+
+                <a href="#" class="btn-programme" id="btn-contact">
+    CONTACTER LES ADMINISTRATEURS
+</a>
+
+
+            </section>
+
+        </main>
+
+        <footer class="footer-retour">
+
+            <a href="index.html">
+                ← Retour accueil
+            </a>
+
+        </footer>
+
+    </div>
+
+    <div id="fenetre-contact" class="modal-contact">
+
+    <div class="modal-contact-contenu">
+
+        <div class="modal-titre">
+            MESSAGE
+        </div>
+
+        <form>
+
+            <div class="modal-corps">
+
+                <div class="modal-gauche">
+
+                    <p>
+                        Cet espace vous permet de transmettre aux administrateurs
+                        toute remarque concernant la plateforme.<br>
+                        Aucune identification n’est demandée.<br>
+                        Votre message sera pris en considération.
+                    </p>
+
+                    <div class="ligne-objet">
+
+                        <label for="objet">Objet :</label>
+
+                        <select id="objet" name="objet" required>
+                            <option value="Difficulté technique">Difficulté technique</option>
+                            <option value="Erreur">Erreur</option>
+                            <option value="Suggestion">Suggestion</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="modal-droite">
+
+                    <label for="message">Votre message</label>
+
+                    <textarea id="message" name="message" rows="10" required></textarea>
+
+                </div>
+
+            </div>
+
+            <div class="modal-actions">
+
+                <button type="button" id="btn-envoyer-message">Envoyer</button>
+
+                <button type="button" id="annuler-contact">Annuler</button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<div id="fenetre-connexion" class="modal-contact">
+
+<div class="modal-contact-contenu">
+
+    <div class="modal-titre">
+        CONNEXION
+    </div>
+
+    <form>
+
+        <div class="modal-corps">
+
+            <div style="width:100%;">
+
+                <div class="ligne-objet">
+
+                    <label for="login">
+                        Login
+                    </label>
+
+                    <input
+                        type="text"
+                        id="login"
+                        name="login"
+                    >
+
+                </div>
+
+                <div class="ligne-objet" style="margin-top:20px;">
+
+                    <label for="motdepasse">
+                        Mot de passe
+                    </label>
+
+                    <input
+                        type="text"
+                        id="motdepasse"
+                        name="motdepasse"
+                    >
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="modal-actions">
+
+            <button type="button" id="entrer-connexion">
+                Entrer
+            </button>
+
+            <button type="button" id="annuler-connexion">
+                Annuler
+            </button>
+
+        </div>
+
+    </form>
+
+</div>
+
+</div>
+
+<div id="fenetre-compte" class="modal-contact">
+
+    <div class="modal-contact-contenu">
+
+        <div class="modal-titre">
+            CRÉER COMPTE
+        </div>
+
+        <form>
+
+            <div class="modal-corps">
+
+                <div style="width:100%;">
+
+                    <div class="ligne-objet">
+
+                        <label for="compte-login">
+                            Login
+                        </label>
+
+                        <input
+                            type="text"
+                            id="compte-login"
+                            name="compte-login"
+                        >
+
+                    </div>
+
+                    <div class="ligne-objet" style="margin-top:20px;">
+
+                        <label for="compte-motdepasse">
+                            Mot de passe
+                        </label>
+
+                        <input
+                            type="text"
+                            id="compte-motdepasse"
+                            name="compte-motdepasse"
+                        >
+
+                    </div>
+
+                    <div style="margin-top:25px; display:flex; justify-content:center; align-items:flex-start; gap:12px;">
+
+                        <input
+                            type="checkbox"
+                            id="compte-engagement"
+                        >
+
+                        <label for="compte-engagement">
+
+                            Je reconnais l’esprit du Programme du Cheminant,
+                            consens librement à entrer dans la démarche<br>
+                            et m’engage à en respecter la confidentialité.
+
+                        </label>
+
+                    </div>
+
+                    <div style="margin-top:25px; text-align:right; font-weight:bold;">
+
+                        Les rubriques sont obligatoires.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="modal-actions">
+
+                <button type="button" id="valider-compte">
+                    Valider
+                </button>
+
+                <button type="button" id="annuler-compte">
+                    Annuler
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    if (typeof emailjs !== "undefined") {
+    emailjs.init("LuuzRHbPFKT_7Ao1w");
+}
+    
+    console.log("SCRIPT CHARGÉ OK");
+
+    // =========================
+    // CONTACT
+    // =========================
+    const btnContact = document.getElementById("btn-contact");
+    const fenetreContact = document.getElementById("fenetre-contact");
+    const btnAnnulerContact = document.getElementById("annuler-contact");
+    const form = fenetreContact.querySelector("form");
+    
+    emailjs.init("LuuzRHbPFKT_7Ao1w");
+
+    if (btnContact && fenetreContact) {
+        btnContact.addEventListener("click", function (e) {
+            e.preventDefault();
+            fenetreContact.style.display = "flex";
+        });
+    }
+
+    if (btnAnnulerContact) {
+        btnAnnulerContact.addEventListener("click", function () {
+            fenetreContact.style.display = "none";
+        });
+    }
+    const btnEnvoyerMessage =
+document.getElementById("btn-envoyer-message");
+
+if (btnEnvoyerMessage) {
+
+   btnEnvoyerMessage.addEventListener("click", function () {
+
+    const message =
+    document.getElementById("message").value.trim();
+
+    if (message === "") {
+
+        alert("Veuillez saisir votre message.");
+
+        return;
+
+    }
+
+    emailjs.send(
+        "service_1vupdge",
+        "template_u8ds37g",
+        {
+            objet: document.getElementById("objet").value,
+            message: message
+        }
+    )
+
+    .then(function () {
+
+        alert("Message envoyé avec succès !");
+
+        fenetreContact.style.display = "none";
+
+        form.reset();
+
+    })
+
+    .catch(function (error) {
+
+        alert("Erreur lors de l'envoi du message");
+
+        console.log(error);
+
+    });
+});
+
+}
+
+    window.addEventListener("click", function (e) {
+        if (e.target === fenetreContact) {
+            fenetreContact.style.display = "none";
+        }
+    });
+
+    // =========================
+    // CONNEXION
+    // =========================
+    const btnEntrer = document.getElementById("btn-entrer");
+    const fenetreConnexion = document.getElementById("fenetre-connexion");
+    const btnAnnulerConnexion = document.getElementById("annuler-connexion");
+    const btnEntrerConnexion = document.getElementById("entrer-connexion");
+
+    console.log("BTN ENTRER =", btnEntrer);
+    console.log("MODAL CONNEXION =", fenetreConnexion);
+
+    if (btnEntrer && fenetreConnexion) {
+        btnEntrer.addEventListener("click", function (e) {
+            e.preventDefault();
+            console.log("CLICK ENTRER OK");
+            fenetreConnexion.style.display = "flex";
+        });
+    }
+
+    if (btnAnnulerConnexion) {
+        btnAnnulerConnexion.addEventListener("click", function () {
+            fenetreConnexion.style.display = "none";
+        });
+    }
+
+    if (btnEntrerConnexion) {
+
+    btnEntrerConnexion.addEventListener("click", function () {
+
+        const login =
+        document.getElementById("login").value.trim();
+
+        const motdepasse =
+        document.getElementById("motdepasse").value.trim();
+
+        if (
+            login === "" ||
+            motdepasse === ""
+        ) {
+
+            alert(
+                "Les rubriques sont obligatoires."
+            );
+
+            return;
+
+        }
+
+        window.location.href = "espace.html";
+
+    });
+
+}
+    window.addEventListener("click", function (e) {
+        if (e.target === fenetreConnexion) {
+            fenetreConnexion.style.display = "none";
+        }
+    });
+
+// =========================
+// COMPTE
+// =========================
+const btnCompte = document.getElementById("btn-compte");
+const fenetreCompte = document.getElementById("fenetre-compte");
+const btnAnnulerCompte = document.getElementById("annuler-compte");
+const btnValiderCompte = document.getElementById("valider-compte");
+console.log("BTN VALIDER =", btnValiderCompte);
+
+if (btnCompte && fenetreCompte) {
+
+    btnCompte.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        fenetreCompte.style.display = "flex";
+
+    });
+
+}
+
+if (btnAnnulerCompte) {
+
+    btnAnnulerCompte.addEventListener("click", function () {
+
+        fenetreCompte.style.display = "none";
+
+    });
+
+}
+
+if (btnValiderCompte) {
+
+    btnValiderCompte.addEventListener("click", function () {
+
+        const login =
+        document.getElementById("compte-login").value.trim();
+
+        const motdepasse =
+        document.getElementById("compte-motdepasse").value.trim();
+
+        const engagement =
+        document.getElementById("compte-engagement").checked;
+
+        if (
+            login === "" ||
+            motdepasse === "" ||
+            !engagement
+        ) {
+
+            alert(
+                "Veuillez compléter toutes les rubriques."
+            );
+
+            return;
+
+        }
+
+        window.location.href = "espace.html";
+
+    });
+
+}
+
+window.addEventListener("click", function (e) {
+
+    if (e.target === fenetreCompte) {
+
+        fenetreCompte.style.display = "none";
+
+    }
+
+});
+
+});
+    
+</script>
+
+</body>
+
+</html>
