@@ -1055,3 +1055,32 @@ main {
 
 
 }
+#fenetre-auteur .modal-actions button {
+
+    min-width: 120px;
+
+    margin-left: 8px;
+
+    padding: 8px 14px;
+
+    border: 1px solid #4a4a8a;
+
+    background: white;
+
+    color: #343b86;
+
+    cursor: pointer;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+}
+
+
+
+#fenetre-auteur .modal-actions button:hover {
+
+    background: #343b86;
+
+    color: white;
+
+}
