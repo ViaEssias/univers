@@ -247,11 +247,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const envoyerAuteur =
         document.getElementById("envoyer-auteur");
 
+    if (boutonAuteur && fenetreAuteur) {
+
     boutonAuteur.addEventListener("click", function(e){
+
         e.preventDefault();
+
         fenetreAuteur.style.display = "flex";
 
     });
+
+}
 
     fermerAuteur.addEventListener("click", function(){
         fenetreAuteur.style.display = "none";
