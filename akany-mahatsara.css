@@ -733,3 +733,52 @@
     opacity: 0.7;
 
 }
+
+/* ==========================================================
+   CONTACT AKANY
+   ========================================================== */
+
+
+.contact-akany {
+
+    text-align: center;
+
+}
+
+
+
+.contact-akany a {
+
+
+    display: inline-block;
+
+
+    padding: 14px 36px;
+
+
+    border: 2px solid var(--couleur-texte);
+
+
+    border-radius: 8px;
+
+
+    color: var(--couleur-texte);
+
+
+    text-decoration: none;
+
+
+    font-size: 1.1rem;
+
+
+}
+
+
+
+.contact-akany a:hover {
+
+
+    opacity: 0.8;
+
+
+}
