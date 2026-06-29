@@ -855,3 +855,205 @@ main {
     color: white;
 
 }
+/* ==========================================================
+   CONTACT AUTEUR — L'ART D'ÊTRE HUMAIN
+   ========================================================== */
+
+
+.contact-auteur {
+
+    text-align: center;
+
+    margin: 25px 0 15px 0;
+
+}
+
+
+.contact-auteur a {
+
+    color: var(--couleur-texte);
+
+    text-decoration: none;
+
+    font-size: 1rem;
+
+}
+
+
+.contact-auteur a:hover {
+
+    opacity: 0.8;
+
+}
+
+
+
+/* ==========================
+   MODALE AUTEUR
+   ========================== */
+
+
+#fenetre-auteur {
+
+    background: rgba(0,0,0,0.35);
+
+    backdrop-filter: blur(2px);
+
+    z-index: 99999;
+
+}
+
+
+
+#fenetre-auteur .modal-contact-contenu {
+
+    width: 650px;
+
+    max-width: 90%;
+
+    background: #f3f3f3;
+
+    border: 1px solid #4a4a8a;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+}
+
+
+
+#fenetre-auteur .modal-titre {
+
+    background: #343b86;
+
+    color: white;
+
+    text-align: center;
+
+    font-size: 1.8rem;
+
+    font-weight: bold;
+
+    padding: 15px;
+
+}
+
+
+
+/* Corps */
+
+
+.modal-corps-auteur {
+
+    padding: 25px;
+
+}
+
+
+
+.ligne-auteur {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.ligne-auteur label {
+
+    width: 130px;
+
+    text-align: right;
+
+    color: #343b86;
+
+    font-weight: bold;
+
+}
+
+
+
+.ligne-auteur input {
+
+    flex: 1;
+
+    height: 32px;
+
+    border: 1px solid #4a4a8a;
+
+    padding: 5px 8px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1rem;
+
+}
+
+
+
+.message-auteur label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #343b86;
+
+    font-weight: bold;
+
+}
+
+
+
+.message-auteur textarea {
+
+    width: 100%;
+
+    resize: vertical;
+
+    border: 1px solid #4a4a8a;
+
+    padding: 8px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1rem;
+
+}
+
+
+
+/* ==========================
+   RESPONSIVE MOBILE
+   ========================== */
+
+
+@media (max-width: 768px) {
+
+
+    .ligne-auteur {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .ligne-auteur label {
+
+        width: auto;
+
+        text-align: left;
+
+    }
+
+
+}
