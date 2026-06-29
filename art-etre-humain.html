@@ -229,114 +229,217 @@
 
     <script>
 
-    document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
+
+
     console.log("DOM CHARGE");
+
+
+    if (typeof emailjs === "undefined") {
+
+        console.log("EmailJS non chargé");
+
+        return;
+
+    }
+
+
     emailjs.init("LuuzRHbPFKT_7Ao1w");
+
+
 
     const boutonAuteur =
         document.getElementById("btn-auteur");
-        console.log("BOUTON AUTEUR :", boutonAuteur);
+
 
     const fenetreAuteur =
         document.getElementById("fenetre-auteur");
-        console.log("FENETRE AUTEUR :", fenetreAuteur);
+
 
     const fermerAuteur =
         document.getElementById("fermer-auteur");
 
+
     const envoyerAuteur =
         document.getElementById("envoyer-auteur");
 
-    if (boutonAuteur && fenetreAuteur) {
+
+
+    console.log("BOUTON :", boutonAuteur);
+
+    console.log("FENETRE :", fenetreAuteur);
+
+
+
+
+    if (!boutonAuteur || !fenetreAuteur) {
+
+        console.log("Éléments contact auteur introuvables");
+
+        return;
+
+    }
+
+
 
     boutonAuteur.addEventListener("click", function(e){
 
+
         e.preventDefault();
+
 
         fenetreAuteur.style.display = "flex";
 
+
     });
 
-}
+
+
+
 
     fermerAuteur.addEventListener("click", function(){
+
+
         fenetreAuteur.style.display = "none";
+
 
     });
 
+
+
+
+
     envoyerAuteur.addEventListener("click", function(){
+
+
 
         const prenom =
         document.getElementById("prenom-auteur")
         .value
         .trim();
 
+
+
         const mail =
         document.getElementById("mail-auteur")
         .value
         .trim();
+
+
 
         const message =
         document.getElementById("message-auteur")
         .value
         .trim();
 
+
+
+
         if (
             prenom === "" ||
             mail === "" ||
             message === ""
         ) {
+
+
             alert(
                 "Veuillez compléter toutes les rubriques."
             );
+
+
             return;
+
         }
 
+
+
+
         emailjs.send(
+
             "service_1vupdge",
+
             "template_u8ds37g",
+
             {
 
-                objet:
+                objet :
                 "L'Art d'être humain - Message d'un lecteur",
 
-                message:
+
+                message :
+
                 "Prénom : " + prenom +
+
                 "\nMail : " + mail +
+
                 "\n\nMessage :\n" + message
+
             }
+
         )
 
+
         .then(function(){
+
+
             alert(
                 "Message envoyé avec succès !"
             );
+
+
             fenetreAuteur.style.display = "none";
+
 
             document
             .querySelector("#fenetre-auteur form")
             .reset();
+
+
+
         })
 
+
         .catch(function(error){
+
+
             alert(
                 "Erreur lors de l'envoi du message."
             );
 
+
             console.log(error);
+
+
         });
+
+
+
     });
+
+
+
+
 
     window.addEventListener("click", function(e){
+
+
         if(e.target === fenetreAuteur){
+
+
             fenetreAuteur.style.display = "none";
+
+
         }
 
+
     });
+
+
 
 });
 
-    </script>
+
+</script>
 
 </body>
 
