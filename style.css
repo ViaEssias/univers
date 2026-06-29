@@ -1096,3 +1096,66 @@ main {
     color: white;
 
 }
+
+/* ==========================================================
+   HARMONISATION PAGE LIVRE
+   ========================================================== */
+
+
+.commande {
+
+    margin-top: 35px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.contact-auteur {
+
+    margin: 35px 0;
+
+}
+
+
+.footer-retour {
+
+    margin: 35px 0;
+
+}
+
+
+/* même taille visuelle */
+
+.commande a,
+.contact-auteur a {
+
+    font-size: 1.1rem;
+
+}
+
+/* ==========================================================
+   ACTIONS MODALE AUTEUR
+   ========================================================== */
+
+
+#fenetre-auteur .modal-actions {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 5px 25px 20px;
+
+}
+
+
+#fenetre-auteur .modal-actions button {
+
+    min-width: 120px;
+
+}
