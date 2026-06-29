@@ -132,4 +132,337 @@
             </section>
 
         </main>
-        
+        <!-- Écrire à l'auteur -->
+
+        <div class="contact-auteur">
+
+            <a href="#" id="btn-auteur">
+                Écrire à l'auteur
+            </a>
+
+        </div>
+
+
+        <!-- Retour accueil -->
+
+        <footer class="footer-retour">
+
+            <a href="index.html">
+                ← Retour accueil
+            </a>
+
+        </footer>
+
+
+    </div>
+
+
+
+    <!-- ==========================
+         MODALE CONTACT AUTEUR
+         ========================== -->
+
+
+    <div id="fenetre-auteur" class="modal-contact">
+
+
+        <div class="modal-contact-contenu">
+
+
+            <div class="modal-titre">
+
+                ÉCRIRE À L'AUTEUR
+
+            </div>
+
+
+            <form>
+
+
+                <div class="modal-corps-auteur">
+
+
+                    <div class="ligne-auteur">
+
+                        <label for="prenom-auteur">
+                            Votre prénom
+                        </label>
+
+                        <input
+                            type="text"
+                            id="prenom-auteur"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="ligne-auteur">
+
+                        <label for="mail-auteur">
+                            Votre mail
+                        </label>
+
+                        <input
+                            type="email"
+                            id="mail-auteur"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="message-auteur">
+
+                        <label for="message-auteur">
+                            Votre message
+                        </label>
+
+                        <textarea
+                            id="message-auteur"
+                            rows="8"
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="modal-actions">
+
+
+                    <button
+                        type="button"
+                        id="envoyer-auteur"
+                    >
+                        Envoyer le message
+                    </button>
+
+
+                    <button
+                        type="button"
+                        id="fermer-auteur"
+                    >
+                        Fermer
+                    </button>
+
+
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- EmailJS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+
+
+    <script>
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    emailjs.init("LuuzRHbPFKT_7Ao1w");
+
+
+
+    const boutonAuteur =
+        document.getElementById("btn-auteur");
+
+
+    const fenetreAuteur =
+        document.getElementById("fenetre-auteur");
+
+
+    const fermerAuteur =
+        document.getElementById("fermer-auteur");
+
+
+    const envoyerAuteur =
+        document.getElementById("envoyer-auteur");
+
+
+
+
+    boutonAuteur.addEventListener("click", function(e){
+
+        e.preventDefault();
+
+        fenetreAuteur.style.display = "flex";
+
+    });
+
+
+
+
+
+    fermerAuteur.addEventListener("click", function(){
+
+        fenetreAuteur.style.display = "none";
+
+    });
+
+
+
+
+
+
+    envoyerAuteur.addEventListener("click", function(){
+
+
+        const prenom =
+        document.getElementById("prenom-auteur")
+        .value
+        .trim();
+
+
+
+        const mail =
+        document.getElementById("mail-auteur")
+        .value
+        .trim();
+
+
+
+        const message =
+        document.getElementById("message-auteur")
+        .value
+        .trim();
+
+
+
+
+        if (
+            prenom === "" ||
+            mail === "" ||
+            message === ""
+        ) {
+
+
+            alert(
+                "Veuillez compléter toutes les rubriques."
+            );
+
+
+            return;
+
+
+        }
+
+
+
+
+        emailjs.send(
+
+            "service_1vupdge",
+
+            "template_u8ds37g",
+
+            {
+
+
+                objet:
+                "L'Art d'être humain - Message d'un lecteur",
+
+
+                message:
+
+                "Prénom : " + prenom +
+
+                "\nMail : " + mail +
+
+                "\n\nMessage :\n" + message
+
+
+            }
+
+
+        )
+
+
+
+        .then(function(){
+
+
+            alert(
+                "Message envoyé avec succès !"
+            );
+
+
+            fenetreAuteur.style.display = "none";
+
+
+            document
+            .querySelector("#fenetre-auteur form")
+            .reset();
+
+
+
+        })
+
+
+
+        .catch(function(error){
+
+
+            alert(
+                "Erreur lors de l'envoi du message."
+            );
+
+
+            console.log(error);
+
+
+
+        });
+
+
+
+    });
+
+
+
+
+
+
+    window.addEventListener("click", function(e){
+
+
+        if(e.target === fenetreAuteur){
+
+
+            fenetreAuteur.style.display = "none";
+
+
+        }
+
+
+    });
+
+
+
+});
+
+
+
+    </script>
+
+
+</body>
+
+</html>
