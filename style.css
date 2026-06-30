@@ -1273,3 +1273,7 @@ text-shadow:
 .modal-actions button {
     font-size: 1.15rem;
 }
+
+.modal-actions button {
+    padding: 10px 18px;
+}
