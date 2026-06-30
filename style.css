@@ -1132,11 +1132,9 @@ main {
 }
 
 .contact-auteur {
-
-    margin: 35px 0;
-
+    text-align: center;
+    margin: 25px 0 15px 0;
 }
-
 
 .footer-retour {
 
@@ -1263,4 +1261,8 @@ text-shadow:
 #fenetre-mabel .modal-actions button:hover {
     background: #343b86;
     color: white;
+}
+
+.final-slide {
+    margin-top: 0 !important;
 }
