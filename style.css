@@ -1277,3 +1277,7 @@ text-shadow:
 .modal-actions button {
     padding: 10px 18px;
 }
+
+.modal-actions button {
+    font-family: Georgia, "Times New Roman", serif;
+}
