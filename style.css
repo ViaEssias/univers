@@ -1269,3 +1269,7 @@ text-shadow:
 .message-auteur textarea {
     resize: none;
 }
+
+.modal-actions button {
+    font-size: 1.15rem;
+}
