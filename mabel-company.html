@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Univers : Mabel Company</title>
+
+```
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.png">
+```
+
+</head>
+
+<body>
+
+<div class="conteneur">
+
+<main class="mabel-page">
+
+```
+<section class="mabel-section">
+
+    <div class="mabel-layout">
+
+        <div class="mabel-logo">
+            <img src="mabel_company_logo.png" alt="Logo Mabel Company">
+        </div>
+
+        <div class="mabel-texte">
+
+            <h1>MABEL Company</h1>
+
+            <p>
+                MABEL Company donne une assise durable aux idées,
+                une structure de coordination et de développement.
+            </p>
+
+            <p>
+                La holding a vocation à porter et accompagner les initiatives
+                inspirées par les mêmes valeurs, leur donnant ainsi
+                une continuité institutionnelle.
+            </p>
+
+            <p>
+                Son action s’inscrit dans la conviction que le développement
+                économique demeure au service de l’être humain
+                et de son épanouissement.
+            </p>
+
+            <p>
+                Les structures accompagnées conservent leur identité propre
+                tout en participant à une dynamique commune,
+                fondée sur des principes partagés :
+                le socle de la vision qui les porte
+                et inspire l’ensemble des engagements.
+            </p>
+
+            <h2 class="mabel-signature">
+                Madagascar. Awareness. Being. Environment. Life.
+            </h2>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="final-slide">
+
+    <div class="contact-akany">
+        <a href="#" id="btn-mabel-contact">
+            Contact
+        </a>
+    </div>
+
+</section>
+```
+
+</main>
+
+<footer class="footer-retour">
+
+```
+<a href="index.html">
+    ← Retour accueil
+</a>
+```
+
+</footer>
+
+</div>
+
+<div id="fenetre-mabel" class="modal-contact">
+
+```
+<div class="modal-contact-contenu">
+
+    <div class="modal-titre">
+        CONTACT
+    </div>
+
+    <form>
+
+        <div class="modal-corps-auteur">
+
+            <div class="ligne-auteur">
+                <label for="prenom-mabel">Votre prénom</label>
+                <input type="text" id="prenom-mabel" required>
+            </div>
+
+            <div class="ligne-auteur">
+                <label for="mail-mabel">Votre mail</label>
+                <input type="email" id="mail-mabel" required>
+            </div>
+
+            <div class="message-auteur">
+                <label for="message-mabel">Votre message</label>
+                <textarea id="message-mabel" rows="8" required></textarea>
+            </div>
+
+        </div>
+
+        <div class="modal-actions">
+
+            <button type="button" id="envoyer-mabel">
+                Envoyer le message
+            </button>
+
+            <button type="button" id="fermer-mabel">
+                Fermer
+            </button>
+
+        </div>
+
+    </form>
+
+</div>
+```
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(){
+
+emailjs.init("LuuzRHbPFKT_7Ao1w");
+
+const bouton = document.getElementById("btn-mabel-contact");
+const fenetre = document.getElementById("fenetre-mabel");
+const fermer = document.getElementById("fermer-mabel");
+const envoyer = document.getElementById("envoyer-mabel");
+
+bouton.addEventListener("click", function(e){
+    e.preventDefault();
+    fenetre.style.display = "flex";
+});
+
+fermer.addEventListener("click", function(){
+    fenetre.style.display = "none";
+});
+
+envoyer.addEventListener("click", function(){
+
+const prenom = document.getElementById("prenom-mabel").value.trim();
+const mail = document.getElementById("mail-mabel").value.trim();
+const message = document.getElementById("message-mabel").value.trim();
+
+if(prenom === "" || mail === "" || message === ""){
+    alert("Veuillez compléter toutes les rubriques.");
+    return;
+}
+
+emailjs.send(
+    "service_1vupdge",
+    "template_u8ds37g",
+    {
+        objet: "Mabel Company - Message d'un visiteur",
+        message:
+        "Prénom : " + prenom +
+        "\nMail : " + mail +
+        "\n\nMessage :\n" + message
+    }
+)
+
+.then(function(){
+    alert("Message envoyé avec succès !");
+    fenetre.style.display="none";
+    document.querySelector("#fenetre-mabel form").reset();
+})
+
+.catch(function(error){
+    alert("Erreur lors de l'envoi du message.");
+    console.log(error);
+});
+
+});
+
+window.addEventListener("click", function(e){
+    if(e.target === fenetre){
+        fenetre.style.display="none";
+    }
+});
+
+});
+
+</script>
+
+</body>
+</html>
