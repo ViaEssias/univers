@@ -1281,3 +1281,8 @@ text-shadow:
 .modal-actions button {
     font-family: Georgia, "Times New Roman", serif;
 }
+
+.message-auteur textarea {
+    font-size: 1rem;
+    font-family: Georgia, "Times New Roman", serif;
+}
