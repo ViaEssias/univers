@@ -1159,3 +1159,77 @@ main {
     min-width: 120px;
 
 }
+
+/* ==========================================================
+PAGE MABEL COMPANY
+========================================================== */
+
+.mabel-page {
+display: flex;
+flex-direction: column;
+justify-content: center;
+min-height: 100vh;
+}
+
+.mabel-section {
+flex: 1;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.mabel-layout {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 80px;
+width: min(95%, 1100px);
+}
+
+.mabel-logo img {
+width: 320px;
+max-width: 100%;
+}
+
+.mabel-texte {
+max-width: 600px;
+text-align: left;
+}
+
+.mabel-texte h1 {
+margin-bottom: 30px;
+}
+
+.mabel-texte p {
+max-width: 100%;
+margin-bottom: 25px;
+text-align: left;
+}
+
+.mabel-signature {
+margin-top: 35px;
+color: var(--couleur-or);
+text-shadow:
+0 0 10px rgba(242, 227, 160, 0.6),
+0 0 25px rgba(242, 227, 160, 0.4),
+0 0 45px rgba(242, 227, 160, 0.25);
+}
+
+@media (max-width: 768px) {
+
+```
+.mabel-layout {
+    flex-direction: column;
+    gap: 40px;
+}
+
+.mabel-texte {
+    text-align: center;
+}
+
+.mabel-texte p {
+    text-align: center;
+}
+```
+
+}
