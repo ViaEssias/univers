@@ -1286,3 +1286,8 @@ text-shadow:
     font-size: 1rem;
     font-family: Georgia, "Times New Roman", serif;
 }
+
+.modal-actions button:hover {
+    background: #343b86;
+    color: white;
+}
