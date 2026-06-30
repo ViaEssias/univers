@@ -1,1 +1,1161 @@
+/* ==========================================================
+   UNIVERS — FEUILLE DE STYLE PRINCIPALE
+   Version harmonisée
+   ========================================================== */
 
+
+/* ==========================
+   RESET GLOBAL
+   ========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section:not(.akany-section) {
+    margin-bottom: var(--espace-section);
+}
+
+
+/* ==========================
+   VARIABLES GÉNÉRALES
+   ========================== */
+
+:root {
+
+    --fond-principal: #1B1035;
+    --couleur-or: #F2E3A0;
+    --couleur-texte: white;
+
+    --largeur-max: 1200px;
+
+    --taille-h1: 3.5rem;
+    --taille-h2: 1.8rem;
+    --taille-texte: 1.15rem;
+
+    --interligne: 1.7;
+
+    --espace-section: 70px;
+
+}
+
+
+
+/* ==========================
+   STRUCTURE DE BASE
+   ========================== */
+
+
+html,
+body {
+
+    width: 100%;
+    min-height: 100%;
+
+    overflow-x: hidden;
+
+}
+
+
+
+body {
+
+    background-color: var(--fond-principal);
+
+    background-image: url("fond_indigo.png");
+
+    background-position: center center;
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    background-attachment: fixed;
+
+
+    color: var(--couleur-texte);
+
+    font-family:
+        "Georgia",
+        "Times New Roman",
+        serif;
+
+
+    line-height: var(--interligne);
+
+}
+
+
+
+/* ==========================
+   CONTENEUR PRINCIPAL
+   ========================== */
+
+
+.conteneur {
+
+    width: 90%;
+
+    max-width: var(--largeur-max);
+
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+
+    display: flex;
+
+    flex-direction: column;
+
+
+    text-align: center;
+
+}
+
+main {
+    flex: 1;
+}
+
+/* ==========================
+   TITRES
+   ========================== */
+
+
+h1 {
+
+    font-size: var(--taille-h1);
+
+    letter-spacing: 8px;
+
+    font-weight: normal;
+
+    color: var(--couleur-or);
+
+
+    text-shadow:
+
+        0 0 10px rgba(242, 227, 160, 0.6),
+
+        0 0 25px rgba(242, 227, 160, 0.4),
+
+        0 0 45px rgba(242, 227, 160, 0.25);
+
+
+}
+
+
+
+h2 {
+
+    font-size: var(--taille-h2);
+
+    font-weight: normal;
+
+    line-height: 1.4;
+
+    color: var(--couleur-texte);
+
+    margin-bottom: 30px;
+
+}
+
+
+
+/* ==========================
+   TEXTE COURANT
+   ========================== */
+
+
+p {
+
+    width: 100%;
+
+    max-width: 750px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+
+    font-size: var(--taille-texte);
+
+    line-height: var(--interligne);
+
+    color: var(--couleur-texte);
+
+}
+
+
+
+strong {
+
+    color: var(--couleur-or);
+
+    font-weight: normal;
+
+}
+
+
+
+/* ==========================
+   IMAGES GÉNÉRALES
+   ========================== */
+
+
+img {
+
+    max-width: 100%;
+
+    height: auto;
+
+}
+/* ==========================================================
+   PAGE D'ACCUEIL
+   ========================================================== */
+
+
+.hero {
+
+    margin-top: 40px;
+
+    margin-bottom: var(--espace-section);
+
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+
+    margin-bottom: 50px;
+}
+
+.menu-item {
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+}
+
+
+
+.menu-item img {
+
+    width: 220px;
+
+    height: 220px;
+
+    object-fit: contain;
+
+
+    transition: transform 0.5s ease;
+
+}
+
+.logo-akany {
+    transform: scale(1.10);
+}
+
+.menu-item:hover img {
+
+    transform: scale(1.04);
+
+}
+
+
+
+/* ==========================================================
+   PAGES INTERNES — STRUCTURE COMMUNE
+   ========================================================== */
+
+.page-header {
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+main {
+
+    width: 100%;
+
+}
+
+/* ==========================================================
+   BOUTONS COMMUNS
+   ========================================================== */
+
+
+.btn,
+.commande a,
+.btn-programme {
+
+    display: inline-block;
+
+
+    padding: 14px 36px;
+
+
+    background: transparent;
+
+    color: var(--couleur-texte);
+
+
+    border: 2px solid var(--couleur-texte);
+
+    border-radius: 8px;
+
+
+    text-decoration: none;
+
+
+    font-size: 1.1rem;
+
+
+    transition: all 0.3s ease;
+
+}
+
+
+
+.btn:hover,
+.commande a:hover,
+.btn-programme:hover {
+
+    opacity: 0.8;
+
+}
+
+
+
+/* ==========================================================
+   PAGE LIVRE
+   ========================================================== */
+
+
+.livre-presentation {
+
+    width: 100%;
+
+    text-align: center;
+
+}
+
+
+
+.livre-image {
+
+    width: 380px;
+
+    max-width: 90%;
+
+    height: auto;
+
+    margin: 20px auto;
+
+}
+
+
+
+.quatrieme-couverture {
+
+    width: min(90%, 750px);
+
+    margin: 40px auto;
+
+}
+
+
+
+.quatrieme-couverture p {
+
+    margin-bottom: 25px;
+
+}
+
+
+
+.question-finale {
+
+    font-style: italic;
+
+    margin-top: 40px;
+
+}
+
+
+
+/* Éditeur */
+
+
+.editeur {
+
+    margin-top: 50px;
+
+}
+
+
+
+.logo-ecce {
+
+    width: 240px;
+
+    height: auto;
+
+    margin-top: 15px;
+
+}
+
+
+
+/* Commande */
+
+
+.commande {
+
+    margin-top: 40px;
+
+    margin-bottom: 60px;
+
+}
+/* ==========================================================
+   PAGE PROGRAMME DU CHEMINANT
+   ========================================================== */
+
+.programme-cheminant {
+    text-align: center;
+    padding: 40px 20px 10px 20px;
+}
+
+.programme-cheminant + .footer-retour {
+    margin-top: 0;
+}
+
+.logo-programme {
+    width: 220px;
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.programme-texte {
+    width: min(90%, 800px);
+    margin: 0 auto 25px auto;
+}
+
+
+.programme-texte p {
+
+    margin-bottom: 25px;
+
+}
+
+.programme-acces {
+    margin: 25px 0;
+}
+
+.identifiants {
+
+    margin-top: 20px;
+
+    font-size: 1rem;
+
+    color: var(--couleur-texte);
+
+}
+
+
+/* ==========================================================
+   FOOTER ET RETOUR ACCUEIL
+   ========================================================== */
+
+
+.footer-retour {
+
+    text-align: center;
+
+    margin: 15px 0 20px 0;
+
+}
+
+
+
+.footer-retour a {
+
+    color: var(--couleur-texte);
+
+    text-decoration: none;
+
+    font-size: 1rem;
+
+}
+
+
+
+.footer-retour a:hover {
+
+    opacity: 0.8;
+
+}
+
+.programme-cheminant + .footer-retour {
+    margin-top: 20px;
+}
+
+/* ==========================================================
+   ÉLÉMENTS COMMUNS AKANY
+   ========================================================== */
+
+
+.akany-section {
+
+    width: 100%;
+
+    margin-bottom: var(--espace-section);
+
+}
+
+
+
+.akany-section p {
+
+    margin-bottom: 30px;
+
+}
+
+
+
+/* Images pleine largeur contrôlée */
+
+
+.vision-full-image,
+.recueillement-image {
+
+    width: min(90%, 1000px);
+
+    height: auto;
+
+    margin: 30px auto;
+
+}
+
+
+
+.raison-image {
+
+    width: min(90%, 900px);
+
+    height: auto;
+
+    margin: 30px auto;
+
+}
+
+
+
+/* Images en rangées */
+
+
+.autonomie-row-2,
+.autonomie-row-3 {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 30px;
+
+    margin: 40px auto;
+
+}
+
+
+
+.autonomie-row-2 img {
+
+    width: 45%;
+
+}
+
+
+
+.autonomie-row-3 img {
+
+    width: 30%;
+
+}
+
+
+
+/* Activités */
+
+
+.activites-bloc {
+
+    width: 100%;
+
+}
+
+
+
+.ligne-2 {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 40px;
+
+    margin: 30px auto;
+
+}
+
+
+
+.ligne-centre {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin: 30px auto;
+
+}
+
+
+
+.activite {
+
+    text-align: center;
+
+}
+
+
+
+.activite img {
+
+    width: 220px;
+
+    height: 220px;
+
+    object-fit: cover;
+
+}
+/* ==========================================================
+   GRILLE DES VALEURS — AKANY MAHATSARA
+   ========================================================== */
+
+
+.valeurs-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    width: 100%;
+
+    margin: 50px auto;
+
+}
+
+
+
+.cell {
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+
+
+.titre-cell {
+
+    color: var(--couleur-or);
+
+    font-size: 1.3rem;
+
+}
+
+
+
+.texte-grand {
+
+    font-size: var(--taille-texte);
+
+}
+
+
+
+.image-cell img {
+
+    width: 100%;
+
+    height: auto;
+
+}
+
+
+
+.row-span-2 {
+
+    min-height: 160px;
+
+}
+
+
+
+/* ==========================================================
+   RESPONSIVE MOBILE
+   ========================================================== */
+
+
+@media (max-width: 768px) {
+
+
+
+    :root {
+
+        --taille-h1: 2.6rem;
+
+        --taille-h2: 1.4rem;
+
+        --taille-texte: 1rem;
+
+    }
+
+
+
+    .conteneur {
+
+        width: 92%;
+
+    }
+
+
+
+    h1 {
+
+        letter-spacing: 5px;
+
+    }
+
+
+
+    p {
+
+        line-height: 1.7;
+
+    }
+
+
+
+    .menu {
+
+        flex-direction: column;
+
+        gap: 40px;
+
+    }
+
+
+
+    .menu-item img {
+
+        width: 170px;
+
+        height: 170px;
+
+    }
+
+
+
+    .autonomie-row-2,
+    .autonomie-row-3,
+    .ligne-2 {
+
+        flex-direction: column;
+
+    }
+
+
+
+    .autonomie-row-2 img,
+    .autonomie-row-3 img {
+
+        width: 90%;
+
+    }
+
+
+
+    .activite img {
+
+        width: 180px;
+
+        height: 180px;
+
+    }
+
+
+
+    .valeurs-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    .titre-cell,
+    .texte-grand {
+
+        font-size: 1rem;
+
+    }
+
+
+
+    .footer-retour {
+
+        margin: 25px 0;
+
+    }
+
+
+}
+/* ==========================
+   COPYRIGHT PAGE ACCUEIL
+   ========================== */
+
+.copyright {
+
+    margin-top: 60px;
+
+    padding-bottom: 30px;
+
+    text-align: center;
+
+    font-size: 1rem;
+
+    color: white;
+
+}
+/* ==========================================================
+   CONTACT AUTEUR — L'ART D'ÊTRE HUMAIN
+   ========================================================== */
+
+
+.contact-auteur {
+
+    text-align: center;
+
+    margin: 25px 0 15px 0;
+
+}
+
+
+.contact-auteur a {
+
+    color: var(--couleur-texte);
+
+    text-decoration: none;
+
+    font-size: 1rem;
+
+}
+
+
+.contact-auteur a:hover {
+
+    opacity: 0.8;
+
+}
+
+
+
+/* ==========================
+   MODALE AUTEUR
+   ========================== */
+
+#fenetre-auteur {
+
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0,0,0,0.35);
+
+    backdrop-filter: blur(2px);
+
+    z-index: 99999;
+
+}
+
+#fenetre-auteur .modal-contact-contenu {
+
+    width: 650px;
+
+    max-width: 90%;
+
+    background: #f3f3f3;
+
+    border: 1px solid #4a4a8a;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+}
+
+
+
+#fenetre-auteur .modal-titre {
+
+    background: #343b86;
+
+    color: white;
+
+    text-align: center;
+
+    font-size: 1.8rem;
+
+    font-weight: bold;
+
+    padding: 15px;
+
+}
+
+
+
+/* Corps */
+
+
+.modal-corps-auteur {
+
+    padding: 25px;
+
+}
+
+
+
+.ligne-auteur {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.ligne-auteur label {
+
+    width: 130px;
+
+    text-align: right;
+
+    color: #343b86;
+
+    font-weight: bold;
+
+}
+
+
+
+.ligne-auteur input {
+
+    flex: 1;
+
+    height: 32px;
+
+    border: 1px solid #4a4a8a;
+
+    padding: 5px 8px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1rem;
+
+}
+
+
+
+.message-auteur label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #343b86;
+
+    font-weight: bold;
+
+}
+
+
+
+.message-auteur textarea {
+
+    width: 100%;
+
+    resize: vertical;
+
+    border: 1px solid #4a4a8a;
+
+    padding: 8px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 1rem;
+
+}
+
+
+
+/* ==========================
+   RESPONSIVE MOBILE
+   ========================== */
+
+
+@media (max-width: 768px) {
+
+
+    .ligne-auteur {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .ligne-auteur label {
+
+        width: auto;
+
+        text-align: left;
+
+    }
+
+
+}
+#fenetre-auteur .modal-actions button {
+
+    min-width: 120px;
+
+    margin-left: 8px;
+
+    padding: 8px 14px;
+
+    border: 1px solid #4a4a8a;
+
+    background: white;
+
+    color: #343b86;
+
+    cursor: pointer;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+}
+
+
+
+#fenetre-auteur .modal-actions button:hover {
+
+    background: #343b86;
+
+    color: white;
+
+}
+
+/* ==========================================================
+   HARMONISATION PAGE LIVRE
+   ========================================================== */
+
+
+.commande {
+
+    margin-top: 35px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.contact-auteur {
+
+    margin: 35px 0;
+
+}
+
+
+.footer-retour {
+
+    margin: 35px 0;
+
+}
+
+
+/* même taille visuelle */
+
+.commande a,
+.contact-auteur a {
+
+    font-size: 1.1rem;
+
+}
+
+/* ==========================================================
+   ACTIONS MODALE AUTEUR
+   ========================================================== */
+
+
+#fenetre-auteur .modal-actions {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 5px 25px 20px;
+
+}
+
+
+#fenetre-auteur .modal-actions button {
+
+    min-width: 120px;
+
+}
