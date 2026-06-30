@@ -1243,7 +1243,6 @@ text-shadow:
 
 @media (max-width: 768px) {
 
-```
 .mabel-layout {
     flex-direction: column;
     gap: 40px;
