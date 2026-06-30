@@ -1265,3 +1265,7 @@ text-shadow:
 .final-slide {
     margin-top: 0 !important;
 }
+
+.message-auteur textarea {
+    resize: none;
+}
