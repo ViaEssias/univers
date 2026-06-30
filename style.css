@@ -915,7 +915,8 @@ main {
 
 }
 
-#fenetre-auteur .modal-contact-contenu {
+#fenetre-auteur .modal-contact-contenu,
+#fenetre-mabel .modal-contact-contenu {
 
     width: 650px;
 
@@ -933,7 +934,8 @@ main {
 
 
 
-#fenetre-auteur .modal-titre {
+#fenetre-auteur .modal-titre,
+#fenetre-mabel .modal-titre {
 
     background: #343b86;
 
@@ -1139,7 +1141,8 @@ main {
    ========================================================== */
 
 
-#fenetre-auteur .modal-actions {
+#fenetre-auteur .modal-actions,
+#fenetre-mabel .modal-actions {
 
     display: flex;
 
@@ -1154,7 +1157,8 @@ main {
 }
 
 
-#fenetre-auteur .modal-actions button {
+#fenetre-auteur .modal-actions button,
+#fenetre-mabel .modal-actions button {
 
     min-width: 120px;
 
@@ -1230,6 +1234,5 @@ text-shadow:
 .mabel-texte p {
     text-align: center;
 }
-```
 
 }
