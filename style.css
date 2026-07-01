@@ -1207,12 +1207,20 @@ text-shadow:
 }
 
 .message-auteur textarea {
+
     width: 100%;
-    resize: vertical;
+    min-height: 180px;
+    resize: none;
+
     border: 1px solid #4a4a8a;
+
     padding: 8px;
+
     font-family: Georgia, "Times New Roman", serif;
     font-size: 1rem;
+
+    display: block;
+
 }
 
 .modal-actions button:hover {
