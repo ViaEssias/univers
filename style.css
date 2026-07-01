@@ -975,9 +975,8 @@ main {
 /* Corps */
 
 
-.modal-corps-auteur
+.modal-corps-auteur {
     padding: 25px;
-
 }
 
 .modal-actions button:hover {
@@ -985,22 +984,20 @@ main {
     color: white;
 }
 
-.ligne-auteur
+.ligne-auteur {
     display: flex;
     align-items: center;
     gap: 15px;
     margin-bottom: 20px;
-
 }
 
 
 
-.ligne-auteur label
+.ligne-auteur label {
     width: 130px;
     text-align: right;
     color: #343b86;
     font-weight: bold;
-
 }
 
 
@@ -1033,6 +1030,12 @@ main {
     font-weight: bold;
 }
 
+.message-auteur label {
+    display: block;
+    margin-bottom: 8px;
+    color: #343b86;
+    font-weight: bold;
+}
 
 /* ==========================
    RESPONSIVE MOBILE
