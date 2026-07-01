@@ -1198,20 +1198,12 @@ text-shadow:
 }
 
 .message-auteur textarea {
-
     width: 100%;
-    min-height: 180px;
+    height: 180px;
     resize: none;
-
+    padding: 10px;
     border: 1px solid #4a4a8a;
-
-    padding: 8px;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1rem;
-
-    display: block;
-
+    font-size: 17px;
 }
 
 .modal-actions button:hover {
