@@ -1023,12 +1023,6 @@ main {
     margin-top: 12px;
 }
 
-.message-auteur {
-    display: block;
-    margin-bottom: 8px;
-    color: #343b86;
-    font-weight: bold;
-}
 
 .message-auteur label {
     display: block;
