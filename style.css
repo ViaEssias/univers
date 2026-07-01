@@ -1208,10 +1208,7 @@ text-shadow:
     font-size: 17px;
 }
 
-.modal-actions button:hover {
-    background: #343b86;
-    color: white;
-}
+
 
 #fenetre-mabel .modal-actions button {
     background: red !important;
