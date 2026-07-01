@@ -997,14 +997,11 @@ main {
 
 
 
-.ligne-auteur label {
-
+#fenetre-auteur .ligne-auteur label,
+#fenetre-mabel .ligne-auteur label
     width: 130px;
-
     text-align: right;
-
     color: #343b86;
-
     font-weight: bold;
 
 }
