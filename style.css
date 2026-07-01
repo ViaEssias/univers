@@ -1113,6 +1113,25 @@ main {
 
 }
 
+#fenetre-auteur .modal-actions button,
+#fenetre-mabel .modal-actions button {
+    min-width: 150px;
+    padding: 9px 16px;
+    border: 1px solid #4a4a8a;
+    background: white;
+    color: #343b86;
+    cursor: pointer;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+#fenetre-auteur .modal-actions button:hover,
+#fenetre-mabel .modal-actions button:hover {
+    background: #343b86;
+    color: white;
+}
+
 #fenetre-auteur .message-auteur textarea,
 #fenetre-mabel .message-auteur textarea {
     width: 100%;
