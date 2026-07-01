@@ -1235,6 +1235,7 @@ text-shadow:
     color: white;
 }
 
+#fenetre-auteur .modal-actions button,
 #fenetre-mabel .modal-actions button {
     min-width: 150px;
     padding: 9px 16px;
