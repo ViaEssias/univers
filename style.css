@@ -1016,7 +1016,13 @@ main {
 
 }
 
+.message-auteur {
 
+    width: 100%;
+
+    margin-top: 10px;
+
+}
 
 .message-auteur label {
 
