@@ -1192,11 +1192,7 @@ text-shadow:
     text-align: center;
 }
 
-#fenetre-auteur .modal-actions button:hover,
-#fenetre-mabel .modal-actions button:hover {
-    background: #343b86;
-    color: white;
-}
+
 
 .final-slide {
     margin-top: 0 !important;
