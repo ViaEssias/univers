@@ -1211,15 +1211,15 @@ text-shadow:
     font-size: 17px;
 }
 
-
-
-#fenetre-mabel .modal-actions button {
-    background: red !important;
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 15px 25px 20px;
+    border-top: 1px solid #4a4a8a;
 }
 
 .modal-actions button {
-    all: unset;
-    display: inline-block;
     min-width: 150px;
     padding: 9px 16px;
     border: 1px solid #4a4a8a;
@@ -1229,4 +1229,9 @@ text-shadow:
     font-family: Georgia, "Times New Roman", serif;
     font-size: 15px;
     text-align: center;
+}
+
+.modal-actions button:hover {
+    background: #343b86;
+    color: white;
 }
