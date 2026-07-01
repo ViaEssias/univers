@@ -4,6 +4,7 @@
    ========================================================== */
 
 
+
 /* ==========================
    RESET GLOBAL
    ========================== */
@@ -915,25 +916,45 @@ main {
 
 }
 
-#fenetre-auteur .modal-contact-contenu {
+#fenetre-mabel {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(2px);
+    z-index: 99999;
+}
 
-    width: 650px;
+#fenetre-auteur .modal-contact-contenu,
+#fenetre-mabel .modal-contact-contenu {
 
-    max-width: 90%;
-
+    width: 850px;
+    max-width: 95%;
     background: #f3f3f3;
-
     border: 1px solid #4a4a8a;
-
-    border-radius: 8px;
-
+    border-radius: 10px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.35);
     overflow: hidden;
 
 }
 
+#fenetre-mabel .message-auteur textarea {
+    width: 100%;
+    height: 180px;
+    resize: none;
+    padding: 10px;
+    border: 1px solid #4a4a8a;
+    font-size: 17px;
+}
 
 
-#fenetre-auteur .modal-titre {
+#fenetre-auteur .modal-titre,
+#fenetre-mabel .modal-titre {
 
     background: #343b86;
 
@@ -955,37 +976,28 @@ main {
 
 
 .modal-corps-auteur {
-
     padding: 25px;
-
 }
 
-
+.modal-actions button:hover {
+    background: #343b86;
+    color: white;
+}
 
 .ligne-auteur {
-
     display: flex;
-
     align-items: center;
-
     gap: 15px;
-
     margin-bottom: 20px;
-
 }
 
 
 
 .ligne-auteur label {
-
     width: 130px;
-
     text-align: right;
-
     color: #343b86;
-
     font-weight: bold;
-
 }
 
 
@@ -1006,39 +1018,18 @@ main {
 
 }
 
+#fenetre-auteur .message-auteur,
+#fenetre-mabel .message-auteur {
+    margin-top: 12px;
+}
 
 
 .message-auteur label {
-
     display: block;
-
     margin-bottom: 8px;
-
     color: #343b86;
-
     font-weight: bold;
-
 }
-
-
-
-.message-auteur textarea {
-
-    width: 100%;
-
-    resize: vertical;
-
-    border: 1px solid #4a4a8a;
-
-    padding: 8px;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 1rem;
-
-}
-
-
 
 /* ==========================
    RESPONSIVE MOBILE
@@ -1067,35 +1058,6 @@ main {
 
 
 }
-#fenetre-auteur .modal-actions button {
-
-    min-width: 120px;
-
-    margin-left: 8px;
-
-    padding: 8px 14px;
-
-    border: 1px solid #4a4a8a;
-
-    background: white;
-
-    color: #343b86;
-
-    cursor: pointer;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-}
-
-
-
-#fenetre-auteur .modal-actions button:hover {
-
-    background: #343b86;
-
-    color: white;
-
-}
 
 /* ==========================================================
    HARMONISATION PAGE LIVRE
@@ -1110,13 +1072,15 @@ main {
 
 }
 
-
-.contact-auteur {
-
-    margin: 35px 0;
-
+.hero .commande {
+    margin-top: 35px;
+    margin-bottom: 10px;
 }
 
+.contact-auteur {
+    text-align: center;
+    margin: 25px 0 15px 0;
+}
 
 .footer-retour {
 
@@ -1138,24 +1102,167 @@ main {
    ACTIONS MODALE AUTEUR
    ========================================================== */
 
-
-#fenetre-auteur .modal-actions {
+#fenetre-auteur .modal-actions,
+#fenetre-mabel .modal-actions {
 
     display: flex;
-
     justify-content: flex-end;
-
-    align-items: center;
-
-    gap: 12px;
-
-    padding: 5px 25px 20px;
+    gap: 10px;
+    padding: 15px 25px 20px;
+    border-top: 1px solid #4a4a8a;
 
 }
 
+/* ==========================================================
+PAGE MABEL COMPANY
+========================================================== */
 
-#fenetre-auteur .modal-actions button {
+.mabel-page {
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+padding-top: 60px;
+min-height: 100vh;
+}
 
-    min-width: 120px;
+.mabel-section {
+flex: 1;
+display: flex;
+align-items: center;
+justify-content: center;
+}
 
+.mabel-layout {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 80px;
+width: min(95%, 1100px);
+}
+
+.mabel-logo img {
+width: 320px;
+max-width: 100%;
+}
+
+.mabel-texte {
+max-width: 600px;
+text-align: left;
+}
+
+.mabel-texte h1 {
+margin-bottom: 30px;
+}
+
+.mabel-texte p {
+max-width: 100%;
+margin-bottom: 25px;
+text-align: left;
+}
+
+.mabel-signature {
+margin-top: 35px;
+color: var(--couleur-or);
+text-shadow:
+0 0 10px rgba(242, 227, 160, 0.6),
+0 0 25px rgba(242, 227, 160, 0.4),
+0 0 45px rgba(242, 227, 160, 0.25);
+}
+
+@media (max-width: 768px) {
+
+.mabel-layout {
+    flex-direction: column;
+    gap: 40px;
+}
+
+.mabel-texte {
+    text-align: center;
+}
+
+.mabel-texte p {
+    text-align: center;
+}
+
+
+
+.final-slide {
+    margin-top: 0 !important;
+}
+
+
+.message-auteur textarea {
+    width: 100%;
+    height: 180px;
+    resize: none;
+    padding: 10px;
+    border: 1px solid #4a4a8a;
+    font-size: 17px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 15px 25px 20px;
+    border-top: 1px solid #4a4a8a;
+}
+
+.modal-actions button {
+    min-width: 150px;
+    padding: 9px 16px;
+    border: 1px solid #4a4a8a;
+    background: white;
+    color: #343b86;
+    cursor: pointer;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+.modal-actions button:hover {
+    background: #343b86;
+    color: white;
+}
+
+#fenetre-mabel .modal-actions button {
+    min-width: 150px;
+    padding: 9px 16px;
+    border: 1px solid #4a4a8a;
+    background: white;
+    color: #343b86;
+    cursor: pointer;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+}
+
+#fenetre-mabel .modal-actions button:hover {
+    background: #343b86;
+    color: white;
+}
+}
+
+#fenetre-mabel .message-auteur textarea {
+    width: 100%;
+    height: 180px;
+    resize: none;
+    padding: 10px;
+    border: 1px solid #4a4a8a;
+    font-size: 17px;
+}
+
+#fenetre-mabel .modal-actions button {
+    min-width: 150px;
+    padding: 9px 16px;
+    border: 1px solid #4a4a8a;
+    background: white;
+    color: #343b86;
+    cursor: pointer;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+}
+
+#fenetre-mabel .modal-actions button:hover {
+    background: #343b86;
+    color: white;
 }
