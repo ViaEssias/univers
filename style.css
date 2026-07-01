@@ -1037,25 +1037,6 @@ main {
 }
 
 
-
-.message-auteur textarea {
-
-    width: 100%;
-
-    resize: vertical;
-
-    border: 1px solid #4a4a8a;
-
-    padding: 8px;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 1rem;
-
-}
-
-
-
 /* ==========================
    RESPONSIVE MOBILE
    ========================== */
@@ -1237,10 +1218,6 @@ text-shadow:
     margin-top: 0 !important;
 }
 
-.message-auteur textarea {
-    resize: none;
-}
-
 .modal-actions button {
     font-size: 1.15rem;
     padding: 10px 18px;
@@ -1248,8 +1225,12 @@ text-shadow:
 }
 
 .message-auteur textarea {
-    font-size: 1rem;
+    width: 100%;
+    resize: vertical;
+    border: 1px solid #4a4a8a;
+    padding: 8px;
     font-family: Georgia, "Times New Roman", serif;
+    font-size: 1rem;
 }
 
 .modal-actions button:hover {
