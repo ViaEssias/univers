@@ -932,21 +932,15 @@ main {
 #fenetre-auteur .modal-contact-contenu,
 #fenetre-mabel .modal-contact-contenu {
 
-    width: 650px;
-
-    max-width: 90%;
-
+    width: 850px;
+    max-width: 95%;
     background: #f3f3f3;
-
     border: 1px solid #4a4a8a;
-
-    border-radius: 8px;
-
+    border-radius: 10px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.35);
     overflow: hidden;
 
 }
-
-
 
 #fenetre-auteur .modal-titre,
 #fenetre-mabel .modal-titre {
