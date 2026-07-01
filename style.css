@@ -1025,7 +1025,8 @@ main {
 
 }
 
-.message-auteur {
+#fenetre-auteur .message-auteur,
+#fenetre-mabel .message-auteur {
     margin-top: 12px;
 }
 
