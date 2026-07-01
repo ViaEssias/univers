@@ -975,8 +975,8 @@ main {
 /* Corps */
 
 
-.modal-corps-auteur {
-
+#fenetre-auteur .modal-corps-auteur,
+#fenetre-mabel .modal-corps-auteur
     padding: 25px;
 
 }
