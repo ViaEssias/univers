@@ -1218,7 +1218,8 @@ text-shadow:
     border-top: 1px solid #4a4a8a;
 }
 
-.modal-actions button {
+#fenetre-auteur .modal-actions button,
+#fenetre-mabel .modal-actions button {
     min-width: 150px;
     padding: 9px 16px;
     border: 1px solid #4a4a8a;
