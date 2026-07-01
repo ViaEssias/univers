@@ -883,3 +883,9 @@
     background: #343b86;
     color: white;
 }
+
+#btn-akany-contact {
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
