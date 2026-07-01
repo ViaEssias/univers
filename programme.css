@@ -109,11 +109,8 @@ body {
 
 .texte-or {
     color: var(--or);
-    text-shadow:
-        0 0 5px rgba(242, 227, 160, 0.35),
-        0 0 12px rgba(242, 227, 160, 0.25),
-        0 0 2px rgba(27, 16, 53, 0.35);
-    font-weight: normal;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.25);
+    font-weight: 600;
 }
 
 strong {
