@@ -1243,3 +1243,17 @@ text-shadow:
     background: rgba(0,0,0,0.35);
     backdrop-filter: blur(2px);
 }
+
+.modal-actions button {
+    all: unset;
+    display: inline-block;
+    min-width: 150px;
+    padding: 9px 16px;
+    border: 1px solid #4a4a8a;
+    background: white;
+    color: #343b86;
+    cursor: pointer;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    text-align: center;
+}
