@@ -981,7 +981,10 @@ main {
 
 }
 
-
+.modal-actions button:hover {
+    background: #343b86;
+    color: white;
+}
 
 .ligne-auteur {
 
