@@ -1243,7 +1243,3 @@ text-shadow:
     font-size: 15px;
     text-align: center;
 }
-
-body {
-    outline: 5px solid red !important;
-}
