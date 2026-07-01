@@ -975,8 +975,7 @@ main {
 /* Corps */
 
 
-#fenetre-auteur .modal-corps-auteur,
-#fenetre-mabel .modal-corps-auteur
+.modal-corps-auteur
     padding: 25px;
 
 }
@@ -986,8 +985,7 @@ main {
     color: white;
 }
 
-#fenetre-auteur .ligne-auteur,
-#fenetre-mabel .ligne-auteur
+.ligne-auteur
     display: flex;
     align-items: center;
     gap: 15px;
@@ -997,8 +995,7 @@ main {
 
 
 
-#fenetre-auteur .ligne-auteur label,
-#fenetre-mabel .ligne-auteur label
+.ligne-auteur label
     width: 130px;
     text-align: right;
     color: #343b86;
@@ -1008,8 +1005,7 @@ main {
 
 
 
-#fenetre-auteur .ligne-auteur input,
-#fenetre-mabel .ligne-auteur input {
+.ligne-auteur input {
 
     flex: 1;
 
@@ -1030,8 +1026,7 @@ main {
     margin-top: 12px;
 }
 
-#fenetre-auteur .message-auteur label,
-#fenetre-mabel .message-auteur label {
+.message-auteur {
     display: block;
     margin-bottom: 8px;
     color: #343b86;
@@ -1231,6 +1226,31 @@ text-shadow:
 .modal-actions button:hover {
     background: #343b86;
     color: white;
+}
+
+#fenetre-mabel .modal-actions button {
+    min-width: 150px;
+    padding: 9px 16px;
+    border: 1px solid #4a4a8a;
+    background: white;
+    color: #343b86;
+    cursor: pointer;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+}
+
+#fenetre-mabel .modal-actions button:hover {
+    background: #343b86;
+    color: white;
+}
+
+#fenetre-mabel .message-auteur textarea {
+    width: 100%;
+    height: 180px;
+    resize: none;
+    padding: 10px;
+    border: 1px solid #4a4a8a;
+    font-size: 17px;
 }
 
 #fenetre-mabel .modal-actions button {
