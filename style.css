@@ -3,9 +3,7 @@
    Version harmonisée
    ========================================================== */
 
-body {
-    background: yellow !important;
-}
+
 
 /* ==========================
    RESET GLOBAL
@@ -1245,8 +1243,4 @@ text-shadow:
     font-family: Georgia, "Times New Roman", serif;
     font-size: 15px;
     text-align: center;
-}
-
-body {
-    outline: 5px solid red !important;
 }
