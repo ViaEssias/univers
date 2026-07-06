@@ -1297,3 +1297,9 @@ text-shadow:
     background: #343b86;
     color: white;
 }
+
+.intro-nom {
+    font-style: italic;
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+}
